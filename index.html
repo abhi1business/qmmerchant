@@ -64,7 +64,7 @@
     <div class="container-fluid p-0">
         <nav class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-lg-5">
             <a href="index.html" class="navbar-brand ml-lg-3">
-            <img src="img/logo.png" alt="Faster Logo" class="img-fluid" style="height: 100px;">
+            <img src="img/logo.png" alt="Faster Logo" class="img-fluid" style="height: 75px;width: 150px;">
             </a>
             <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                 <span class="navbar-toggler-icon"></span>
@@ -72,8 +72,8 @@
             <div class="collapse navbar-collapse justify-content-between px-lg-3" id="navbarCollapse">
                 <div class="navbar-nav m-auto py-0">
                     <a href="index.html" class="nav-item nav-link active">Home</a>
-                    <a href="about.html" class="nav-item nav-link">About</a>
-                    <a href="service.html" class="nav-item nav-link">Service</a>
+                    <a href="about.html" class="nav-item nav-link">About US</a>
+                    <a href="products.html" class="nav-item nav-link">Products</a>
                     <a href="price.html" class="nav-item nav-link">Price</a>
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
@@ -91,252 +91,702 @@
     <!-- Navbar End -->
 
 
-    <!-- Header Start -->
-    <div class="jumbotron jumbotron-fluid mb-5">
-        <div class="container text-center py-5">
-            <h1 class="text-primary mb-4">Your Trusted Partner in Premium Spices, Rice & Pulses</h1>
-            <h3 class="text-white display-3 mb-5">Exporting Quality Products from India to the World</h3>
-           
+<!-- Header Start -->
+<div class="header-slider mb-5">
+    <div class="slider-container">
+        <!-- Slide 1 - Spices -->
+        <div class="slide active">
+            <div class="slide-image" style="background-image: url('https://images.unsplash.com/photo-1596040033229-a9821ebd058d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80');"></div>
+            <div class="slide-overlay"></div>
+            <div class="container">
+                <div class="slide-content text-center">
+                    <h1 class="text-white mb-3">Premium Indian Spices</h1>
+                    <p class="text-white lead mb-4">Authentic flavors sourced from trusted farms</p>
+                    <a href="products.html" class="btn btn-custom btn-lg px-4">Explore Spices</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 2 - Rice -->
+        <div class="slide">
+            <div class="slide-image" style="background-image: url('https://images.unsplash.com/photo-1586201375761-83865001e31c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80');"></div>
+            <div class="slide-overlay"></div>
+            <div class="container">
+                <div class="slide-content text-center">
+                    <h1 class="text-white mb-3">Quality Rice Varieties</h1>
+                    <p class="text-white lead mb-4">Premium grains for global cuisines</p>
+                    <a href="products.html" class="btn btn-custom btn-lg px-4">Discover Rice</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 3 - Pulses -->
+        <div class="slide">
+            <div class="slide-image" style="background-image: url('img/headerpulses.jpg');"></div>
+            <div class="slide-overlay"></div>
+            <div class="container">
+                <div class="slide-content text-center">
+                    <h1 class="text-white mb-3">Nutritious Pulses</h1>
+                    <p class="text-white lead mb-4">High-protein legumes for healthy meals</p>
+                    <a href="products.html" class="btn btn-custom btn-lg px-4">View Pulses</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation Arrows -->
+        <button class="slider-nav prev" onclick="changeSlide(-1)">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="slider-nav next" onclick="changeSlide(1)">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+
+        <!-- Dots Indicator -->
+        <div class="slider-dots">
+            <span class="dot active" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
         </div>
     </div>
-    <!-- Header End -->
+</div>
+<!-- Header End -->
 
+<style>
+.header-slider {
+    position: relative;
+    height: 100vh;
+    min-height: 600px;
+    overflow: hidden;
+}
 
-    <!-- About Start -->
-    <div class="container-fluid py-5">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-5 pb-4 pb-lg-0">
-                    <img class="img-fluid w-100" src="img/about.jpg" alt="">
-                    <div class="bg-primary text-dark text-center p-4">
-                        <h3 class="m-0">25+ Years Experience</h3>
-                    </div>
-                </div>
-                <div class="col-lg-7">
-                    <h6 class="text-primary text-uppercase font-weight-bold">About Us</h6>
-                    <h1 class="mb-4">Trusted & Faster Logistic Service Provider</h1>
-                    <p class="mb-4">Dolores lorem lorem ipsum sit et ipsum. Sadip sea amet diam dolore sed et. Sit rebum labore sit sit ut vero no sit. Et elitr stet dolor sed sit et sed ipsum et kasd ut. Erat duo eos et erat sed diam duo</p>
-                    <div class="d-flex align-items-center pt-2">
-                        <button type="button" class="btn-play" data-toggle="modal"
-                            data-src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-target="#videoModal">
-                            <span></span>
-                        </button>
-                        <h5 class="font-weight-bold m-0 ml-4">Play Video</h5>
-                    </div>
+.slider-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1.2s ease-in-out;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+.slide-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: transform 10s ease;
+}
+
+.slide.active .slide-image {
+    transform: scale(1.08);
+}
+
+.slide-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.6) 100%);
+}
+
+.slide-content {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.slide-content h1 {
+    font-size: 3.2rem;
+    font-weight: 600;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    animation: fadeInUp 1s ease;
+    margin-bottom: 1rem;
+}
+
+.slide-content p {
+    font-size: 1.3rem;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+    animation: fadeInUp 1s ease 0.3s both;
+    margin-bottom: 2rem;
+    font-weight: 300;
+}
+
+.btn-custom {
+    background: linear-gradient(135deg, #FF8C42 0%, #FF6B35 100%);
+    border: none;
+    color: white;
+    padding: 12px 35px;
+    border-radius: 30px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    animation: fadeInUp 1s ease 0.6s both;
+    box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+}
+
+.btn-custom:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 107, 53, 0.4);
+    background: linear-gradient(135deg, #FF6B35 0%, #FF8C42 100%);
+    color: white;
+}
+
+/* Navigation Arrows */
+.slider-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.15);
+    border: none;
+    color: white;
+    font-size: 1.3rem;
+    padding: 12px 16px;
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    border-radius: 8px;
+}
+
+.slider-nav:hover {
+    background: rgba(255, 107, 53, 0.3);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.slider-nav.prev {
+    left: 25px;
+}
+
+.slider-nav.next {
+    right: 25px;
+}
+
+/* Dots Indicator */
+.slider-dots {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 12px;
+    z-index: 10;
+}
+
+.dot {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.dot.active {
+    background: #FF8C42;
+    transform: scale(1.2);
+    border-color: rgba(255, 255, 255, 0.8);
+}
+
+.dot:hover {
+    background: #FF8C42;
+    transform: scale(1.1);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .header-slider {
+        height: 70vh;
+        min-height: 500px;
+    }
+    
+    .slide-content h1 {
+        font-size: 2rem;
+        margin-bottom: 0.8rem;
+    }
+    
+    .slide-content p {
+        font-size: 1.1rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .btn-custom {
+        padding: 10px 25px;
+        font-size: 0.9rem;
+    }
+    
+    .slider-nav {
+        padding: 10px 12px;
+        font-size: 1rem;
+    }
+    
+    .slider-nav.prev {
+        left: 15px;
+    }
+    
+    .slider-nav.next {
+        right: 15px;
+    }
+    
+    .slider-dots {
+        bottom: 20px;
+    }
+    
+    .dot {
+        width: 12px;
+        height: 12px;
+    }
+}
+
+@media (max-width: 576px) {
+    .header-slider {
+        height: 60vh;
+        min-height: 400px;
+    }
+    
+    .slide-content h1 {
+        font-size: 1.6rem;
+    }
+    
+    .slide-content p {
+        font-size: 0.95rem;
+    }
+    
+    .slide-content {
+        padding: 0 15px;
+    }
+}
+
+/* Pause animation on reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    .slide.active .slide-image {
+        transform: none;
+    }
+    
+    .slide {
+        transition: opacity 0.5s ease-in-out;
+    }
+}
+</style>
+
+<script>
+let currentSlideIndex = 0;
+let slideInterval;
+
+function showSlide(index) {
+    const slides = document.querySelectorAll('.slide');
+    const dots = document.querySelectorAll('.dot');
+    
+    if (index >= slides.length) currentSlideIndex = 0;
+    if (index < 0) currentSlideIndex = slides.length - 1;
+    
+    slides.forEach(slide => slide.classList.remove('active'));
+    dots.forEach(dot => dot.classList.remove('active'));
+    
+    slides[currentSlideIndex].classList.add('active');
+    dots[currentSlideIndex].classList.add('active');
+}
+
+function changeSlide(n) {
+    clearInterval(slideInterval);
+    currentSlideIndex += n;
+    showSlide(currentSlideIndex);
+    startAutoSlide();
+}
+
+function currentSlide(n) {
+    clearInterval(slideInterval);
+    currentSlideIndex = n - 1;
+    showSlide(currentSlideIndex);
+    startAutoSlide();
+}
+
+function startAutoSlide() {
+    slideInterval = setInterval(() => {
+        currentSlideIndex++;
+        showSlide(currentSlideIndex);
+    }, 6000); // Change slide every 6 seconds
+}
+
+// Initialize slider
+document.addEventListener('DOMContentLoaded', function() {
+    showSlide(currentSlideIndex);
+    startAutoSlide();
+    
+    // Pause auto-slide on hover
+    const slider = document.querySelector('.slider-container');
+    slider.addEventListener('mouseenter', () => clearInterval(slideInterval));
+    slider.addEventListener('mouseleave', startAutoSlide);
+    
+    // Touch swipe support for mobile
+    let touchStartX = 0;
+    let touchEndX = 0;
+    
+    slider.addEventListener('touchstart', e => {
+        touchStartX = e.changedTouches[0].screenX;
+    });
+    
+    slider.addEventListener('touchend', e => {
+        touchEndX = e.changedTouches[0].screenX;
+        handleSwipe();
+    });
+    
+    function handleSwipe() {
+        if (touchEndX < touchStartX - 50) changeSlide(1); // Swipe left
+        if (touchEndX > touchStartX + 50) changeSlide(-1); // Swipe right
+    }
+});
+</script>
+
+<!-- About Start -->
+<div class="container-fluid py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-5 pb-4 pb-lg-0">
+                <img class="img-fluid" src="img/about1.jpg" alt="QM Merchant International - Quality Spices, Rice & Pulses" style="height: 400px;">
+                <div class="bg-primary text-white text-center p-4"style="width: 400px;">
+                    <h3 class="m-0">Quality & Reliability  </h3>
                 </div>
             </div>
-        </div>
-        <!-- Video Modal -->
-        <div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-body">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>        
-                        <!-- 16:9 aspect ratio -->
-                        <div class="embed-responsive embed-responsive-16by9">
-                            <iframe class="embed-responsive-item" src="" id="video"  allowscriptaccess="always" allow="autoplay"></iframe>
+            <div class="col-lg-7">
+                <h6 class="text-primary text-uppercase font-weight-bold">About QM Merchant International</h6>
+                <h1 class="mb-4">Your Trusted Partner in Premium Agricultural Exports</h1>
+                <p class="mb-4">Founded in the heart of India's agricultural belt in Jabalpur, QM Merchant International has been a leading exporter of premium quality spices, rice, and pulses for over years. We bridge the gap between India's rich agricultural heritage and global markets.</p>
+                
+                <p class="mb-4">Our commitment to quality begins at the source. We work directly with trusted farmers and implement strict quality control measures at every stage - from sourcing and processing to packaging and delivery. This ensures that our clients receive products that meet international standards.</p>
+                
+                <div class="row mb-4">
+                    <div class="col-sm-6">
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="fas fa-check-circle text-primary mr-3"></i>
+                            <span>Direct Farmer Relationships</span>
                         </div>
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="fas fa-check-circle text-primary mr-3"></i>
+                            <span>Quality Certified Products</span>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="fas fa-check-circle text-primary mr-3"></i>
+                            <span>Global Export Expertise</span>
+                        </div>
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="fas fa-check-circle text-primary mr-3"></i>
+                            <span>Customized Packaging</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- <div class="d-flex align-items-center pt-2">
+                    <button type="button" class="btn-play" data-toggle="modal"
+                        data-src="https://www.youtube.com/embed/your-company-video" data-target="#videoModal">
+                        <span></span>
+                    </button>
+                    <h5 class="font-weight-bold m-0 ml-4">Our Quality Process</h5>
+                </div> -->
+            </div>
+        </div>
+    </div>
+    <!-- Video Modal -->
+    <div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>        
+                    <!-- 16:9 aspect ratio -->
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="" id="video" allowscriptaccess="always" allow="autoplay"></iframe>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- About End -->
+</div>
+<!-- About End -->
 
-
-    <!--  Quote Request Start -->
-    <div class="container-fluid bg-secondary my-5">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-7 py-5 py-lg-0">
-                    <h6 class="text-primary text-uppercase font-weight-bold">Get A Quote</h6>
-                    <h1 class="mb-4">Request A Free Quote</h1>
-                    <p class="mb-4">Dolores lorem lorem ipsum sit et ipsum. Sadip sea amet diam dolore sed et. Sit rebum labore sit sit ut vero no sit. Et elitr stet dolor sed sit et sed ipsum et kasd ut. Erat duo eos et erat sed diam duo</p>
-                    <div class="row">
-                        <div class="col-sm-4">
-                            <h1 class="text-primary mb-2" data-toggle="counter-up">225</h1>
-                            <h6 class="font-weight-bold mb-4">SKilled Experts</h6>
-                        </div>
-                        <div class="col-sm-4">
-                            <h1 class="text-primary mb-2" data-toggle="counter-up">1050</h1>
-                            <h6 class="font-weight-bold mb-4">Happy Clients</h6>
-                        </div>
-                        <div class="col-sm-4">
-                            <h1 class="text-primary mb-2" data-toggle="counter-up">2500</h1>
-                            <h6 class="font-weight-bold mb-4">Complete Projects</h6>
-                        </div>
+<!-- Quote Request Start -->
+<div class="container-fluid bg-light my-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-7 py-5 py-lg-0">
+                <h6 class="text-primary text-uppercase font-weight-bold">Get Product Quote</h6>
+                <h1 class="mb-4">Request A Free Quote For Our Premium Products</h1>
+                <p class="mb-4">Interested in our high-quality spices, rice, or pulses? Get competitive pricing and detailed product information. Our export experts will provide you with customized quotes based on your requirements.</p>
+                
+                <div class="row">
+                    <div class="col-sm-4 mb-3 mb-sm-0">
+                        <h1 class="text-primary mb-2" data-toggle="counter-up">20</h1>
+                        <h6 class="font-weight-bold mb-4">Happy Clients</h6>
+                    </div>
+                    <div class="col-sm-4 mb-3 mb-sm-0">
+                        <h1 class="text-primary mb-2" data-toggle="counter-up">50</h1>
+                        <h6 class="font-weight-bold mb-4">Quality Products</h6>
+                    </div>
+                    <div class="col-sm-4">
+                        <h1 class="text-primary mb-2" data-toggle="counter-up">5</h1>
+                        <h6 class="font-weight-bold mb-4">Countries Served</h6>
                     </div>
                 </div>
-                <div class="col-lg-5">
-                    <div class="bg-primary py-5 px-4 px-sm-5">
-                        <form class="py-5">
-                            <div class="form-group">
-                                <input type="text" class="form-control border-0 p-4" placeholder="Your Name" required="required" />
-                            </div>
-                            <div class="form-group">
-                                <input type="email" class="form-control border-0 p-4" placeholder="Your Email" required="required" />
-                            </div>
-                            <div class="form-group">
-                                <select class="custom-select border-0 px-4" style="height: 47px;">
-                                    <option selected>Select A Service</option>
-                                    <option value="1">Service 1</option>
-                                    <option value="2">Service 1</option>
-                                    <option value="3">Service 1</option>
-                                </select>
-                            </div>
-                            <div>
-                                <button class="btn btn-dark btn-block border-0 py-3" type="submit">Get A Quote</button>
-                            </div>
-                        </form>
+                
+                <div class="mt-4">
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="fas fa-check text-primary mr-3"></i>
+                        <span>Competitive International Pricing</span>
+                    </div>
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="fas fa-check text-primary mr-3"></i>
+                        <span>Customized Packaging Options</span>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <i class="fas fa-check text-primary mr-3"></i>
+                        <span>Quick Response Within 24 Hours</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-5">
+                <div class="bg-primary py-5 px-4 px-sm-5">
+                    <form class="py-3">
+                        <h4 class="text-white text-center mb-4">Product Inquiry Form</h4>
+                        
+                        <div class="form-group">
+                            <input type="text" class="form-control border-0 p-3" placeholder="Your Full Name" required="required" />
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control border-0 p-3" placeholder="Your Email Address" required="required" />
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" class="form-control border-0 p-3" placeholder="Your Phone Number" />
+                        </div>
+                        <!-- <div class="form-group">
+                            <input type="text" class="form-control border-0 p-3" placeholder="Your Company Name" />
+                        </div> -->
+                        <div class="form-group">
+                            <select class="custom-select border-0 px-3" style="height: 50px;">
+                                <option selected>Product Category</option>
+                                <option value="spices">Spices</option>
+                                <option value="rice">Rice</option>
+                                <option value="pulses">Pulses</option>
+                                <option value="multiple">Multiple Products</option>
+                            </select>
+                        </div>
+                        <!-- <div class="form-group">
+                            <select class="custom-select border-0 px-3" style="height: 50px;">
+                                <option selected>Quantity Required</option>
+                                <option value="sample">Sample First</option>
+                                <option value="small">Small Order (1-5 MT)</option>
+                                <option value="medium">Medium Order (5-20 MT)</option>
+                                <option value="large">Large Order (20+ MT)</option>
+                                <option value="bulk">Bulk Order</option>
+                            </select>
+                        </div> -->
+                        <div class="form-group">
+                            <textarea class="form-control border-0 p-3" rows="3" placeholder="Specific Requirements or Product Details or Feedback"></textarea>
+                        </div>
+                        <div>
+                            <button class="btn btn-dark btn-block border-0 py-3" type="submit">submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Quote Request End -->
+
+<!-- Products Start -->
+<div class="container-fluid pt-5">
+    <div class="container">
+        <div class="text-center pb-4">
+            <h6 class="text-primary text-uppercase font-weight-bold">Our Products</h6>
+            <h1 class="mb-4">Premium Quality Agricultural Products</h1>
+        </div>
+        
+        <div class="row">
+            <!-- Product 1 -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="product-card card border-0 shadow-sm h-100 text-center">
+                    <img src="img/termaric.jpg" class="card-img-top" alt="Premium Turmeric" style="height: 200px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="card-title text-primary">Premium Turmeric</h5>
+                        <p class="card-text">Rich golden color with high curcumin content</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="product-card card border-0 shadow-sm h-100 text-center">
+                    <img src="img/rise.jpg" class="card-img-top" alt="Basmati Rice" style="height: 200px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="card-title text-primary">Basmati Rice</h5>
+                        <p class="card-text">Long grain aromatic rice for premium dishes</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="product-card card border-0 shadow-sm h-100 text-center">
+                    <img src="img/chickpeas.jpg" class="card-img-top" alt="Chickpeas" style="height: 200px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="card-title text-primary">Chickpeas</h5>
+                        <p class="card-text">High protein chickpeas for healthy nutrition</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="product-card card border-0 shadow-sm h-100 text-center">
+                    <img src="img/red-chili.jpg" class="card-img-top" alt="Red Chili Powder" style="height: 200px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="card-title text-primary">Red Chili Powder</h5>
+                        <p class="card-text">Spicy and vibrant red chili powder</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 5 -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="product-card card border-0 shadow-sm h-100 text-center">
+                    <img src="img/sona-masoori.jpg" class="card-img-top" alt="Sona Masoori Rice" style="height: 200px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="card-title text-primary">Sona Masoori Rice</h5>
+                        <p class="card-text">Medium grain rice perfect for daily meals</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 6 -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="product-card card border-0 shadow-sm h-100 text-center">
+                    <img src="img/lentils.jpg" class="card-img-top" alt="Lentils" style="height: 200px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="card-title text-primary">Lentils</h5>
+                        <p class="card-text">Nutritious lentils for soups and curries</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Quote Request Start -->
+</div>
+<!-- Products End -->
+
+<style>
+.product-card {
+    transition: transform 0.3s ease;
+    border-radius: 10px;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1) !important;
+}
+
+.card-title {
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.card-text {
+    color: #666;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+</style>
 
 
-    <!-- Services Start -->
-    <div class="container-fluid pt-5">
-        <div class="container">
-            <div class="text-center pb-2">
-                <h6 class="text-primary text-uppercase font-weight-bold">Our Services</h6>
-                <h1 class="mb-4">Best Logistic Services</h1>
+<!-- Features Start -->
+<div class="container-fluid bg-light my-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-5">
+                <img class="img-fluid w-100 rounded shadow" src="img/features.jpg" alt="QM Merchant International Quality Assurance" style="height: 600px; object-fit: cover;">
             </div>
-            <div class="row pb-3">
-                <div class="col-lg-3 col-md-6 text-center mb-5">
-                    <div class="d-flex align-items-center justify-content-center bg-primary mb-4 p-4">
-                        <i class="fa fa-2x fa-plane text-dark pr-3"></i>
-                        <h6 class="text-white font-weight-medium m-0">Air Freight</h6>
+            <div class="col-lg-7 py-5 py-lg-0">
+                <h6 class="text-primary text-uppercase font-weight-bold">Why Choose Us</h6>
+                <h1 class="mb-4">Your Trusted Partner in Agricultural Exports</h1>
+                <p class="mb-4">With years of experience, QM Merchant International has established itself as a reliable exporter of premium spices, rice, and pulses. Our commitment to quality and customer satisfaction sets us apart in the global market.</p>
+                
+                <div class="row">
+                    <div class="col-md-6">
+                        <ul class="list-unstyled">
+                            <li class="mb-3">
+                                <h6><i class="fas fa-check-circle text-primary mr-3"></i>Premium Quality Products</h6>
+                                <small class="text-muted">Direct sourcing from trusted farms</small>
+                            </li>
+                            <li class="mb-3">
+                                <h6><i class="fas fa-check-circle text-primary mr-3"></i>Competitive Pricing</h6>
+                                <small class="text-muted">Best value for your investment</small>
+                            </li>
+                            <li class="mb-3">
+                                <h6><i class="fas fa-check-circle text-primary mr-3"></i>Global Export Expertise</h6>
+                                <small class="text-muted">Serving 5+ countries worldwide</small>
+                            </li>
+                        </ul>
                     </div>
-                    <p>Diam amet eos at no eos sit lorem, amet rebum ipsum clita stet diam sea est diam</p>
-                    <a class="border-bottom text-decoration-none" href="">Read More</a>
-                </div>
-                <div class="col-lg-3 col-md-6 text-center mb-5">
-                    <div class="d-flex align-items-center justify-content-center bg-primary mb-4 p-4">
-                        <i class="fa fa-2x fa-ship text-dark pr-3"></i>
-                        <h6 class="text-white font-weight-medium m-0">Ocean Freight</h6>
+                    <div class="col-md-6">
+                        <ul class="list-unstyled">
+                            <li class="mb-3">
+                                <h6><i class="fas fa-check-circle text-primary mr-3"></i>Timely Delivery</h6>
+                                <small class="text-muted">Efficient logistics and shipping</small>
+                            </li>
+                            <li class="mb-3">
+                                <h6><i class="fas fa-check-circle text-primary mr-3"></i>Quality Assurance</h6>
+                                <small class="text-muted">Stringent quality control measures</small>
+                            </li>
+                            <li class="mb-3">
+                                <h6><i class="fas fa-check-circle text-primary mr-3"></i>Custom Packaging</h6>
+                                <small class="text-muted">Tailored to your requirements</small>
+                            </li>
+                        </ul>
                     </div>
-                    <p>Diam amet eos at no eos sit lorem, amet rebum ipsum clita stet diam sea est diam</p>
-                    <a class="border-bottom text-decoration-none" href="">Read More</a>
                 </div>
-                <div class="col-lg-3 col-md-6 text-center mb-5">
-                    <div class="d-flex align-items-center justify-content-center bg-primary mb-4 p-4">
-                        <i class="fa fa-2x fa-truck text-dark pr-3"></i>
-                        <h6 class="text-white font-weight-medium m-0">Land Transport</h6>
-                    </div>
-                    <p>Diam amet eos at no eos sit lorem, amet rebum ipsum clita stet diam sea est diam</p>
-                    <a class="border-bottom text-decoration-none" href="">Read More</a>
-                </div>
-                <div class="col-lg-3 col-md-6 text-center mb-5">
-                    <div class="d-flex align-items-center justify-content-center bg-primary mb-4 p-4">
-                        <i class="fa fa-2x fa-store text-dark pr-3"></i>
-                        <h6 class="text-white font-weight-medium m-0">Cargo Storage</h6>
-                    </div>
-                    <p>Diam amet eos at no eos sit lorem, amet rebum ipsum clita stet diam sea est diam</p>
-                    <a class="border-bottom text-decoration-none" href="">Read More</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Services End -->
 
-
-    <!-- Features Start -->
-    <div class="container-fluid bg-secondary my-5">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-5">
-                    <img class="img-fluid w-100" src="img/feature.jpg" alt="">
-                </div>
-                <div class="col-lg-7 py-5 py-lg-0">
-                    <h6 class="text-primary text-uppercase font-weight-bold">Why Choose Us</h6>
-                    <h1 class="mb-4">Faster, Safe and Trusted Logistics Services</h1>
-                    <p class="mb-4">Dolores lorem lorem ipsum sit et ipsum. Sadip sea amet diam dolore sed et. Sit rebum labore sit sit ut vero no sit. Et elitr stet dolor sed sit et sed ipsum et kasd ut. Erat duo eos et erat sed diam duo</p>
-                    <ul class="list-inline">
-                        <li><h6><i class="far fa-dot-circle text-primary mr-3"></i>Best In Industry</h6>
-                        <li><h6><i class="far fa-dot-circle text-primary mr-3"></i>Emergency Services</h6></li>
-                        <li><h6><i class="far fa-dot-circle text-primary mr-3"></i>24/7 Customer Support</h6></li>
-                    </ul>
-                    <a href="" class="btn btn-primary mt-3 py-2 px-4">Learn More</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Features End -->
-
-
-    <!-- Pricing Plan Start -->
-    <div class="container-fluid pt-5">
-        <div class="container">
-            <div class="text-center pb-2">
-                <h6 class="text-primary text-uppercase font-weight-bold">Pricing Plan</h6>
-                <h1 class="mb-4">Affordable Pricing Packages</h1>
-            </div>
-            <div class="row">
-                <div class="col-md-4 mb-5">
-                    <div class="bg-secondary">
-                        <div class="text-center p-4">
-                            <h1 class="display-4 mb-0">
-                                <small class="align-top text-muted font-weight-medium" style="font-size: 22px; line-height: 45px;">$</small>49<small class="align-bottom text-muted font-weight-medium" style="font-size: 16px; line-height: 40px;">/Mo</small>
-                            </h1>
-                        </div>
-                        <div class="bg-primary text-center p-4">
-                            <h3 class="m-0">Basic</h3>
-                        </div>
-                        <div class="d-flex flex-column align-items-center py-4">
-                            <p>HTML5 & CSS3</p>
-                            <p>Bootstrap 4</p>
-                            <p>Responsive Layout</p>
-                            <p>Compatible With All Browsers</p>
-                            <a href="" class="btn btn-primary py-2 px-4 my-2">Order Now</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-5">
-                    <div class="bg-secondary">
-                        <div class="text-center p-4">
-                            <h1 class="display-4 mb-0">
-                                <small class="align-top text-muted font-weight-medium" style="font-size: 22px; line-height: 45px;">$</small>99<small class="align-bottom text-muted font-weight-medium" style="font-size: 16px; line-height: 40px;">/Mo</small>
-                            </h1>
-                        </div>
-                        <div class="bg-primary text-center p-4">
-                            <h3 class="m-0">Premium</h3>
-                        </div>
-                        <div class="d-flex flex-column align-items-center py-4">
-                            <p>HTML5 & CSS3</p>
-                            <p>Bootstrap 4</p>
-                            <p>Responsive Layout</p>
-                            <p>Compatible With All Browsers</p>
-                            <a href="" class="btn btn-primary py-2 px-4 my-2">Order Now</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-5">
-                    <div class="bg-secondary">
-                        <div class="text-center p-4">
-                            <h1 class="display-4 mb-0">
-                                <small class="align-top text-muted font-weight-medium" style="font-size: 22px; line-height: 45px;">$</small>149<small class="align-bottom text-muted font-weight-medium" style="font-size: 16px; line-height: 40px;">/Mo</small>
-                            </h1>
-                        </div>
-                        <div class="bg-primary text-center p-4">
-                            <h3 class="m-0">Business</h3>
-                        </div>
-                        <div class="d-flex flex-column align-items-center py-4">
-                            <p>HTML5 & CSS3</p>
-                            <p>Bootstrap 4</p>
-                            <p>Responsive Layout</p>
-                            <p>Compatible With All Browsers</p>
-                            <a href="" class="btn btn-primary py-2 px-4 my-2">Order Now</a>
-                        </div>
-                    </div>
-                </div>
+                <a href="#" class="btn btn-primary mt-4 py-2 px-4">Get Free Quote</a>
             </div>
         </div>
     </div>
-    <!-- Pricing Plan End -->
+</div>
+<!-- Features End -->
+
 
 
     <!-- Team Start -->
@@ -542,78 +992,85 @@
     </div>
     <!-- Blog End -->
 
+<!-- Footer Start -->
+<div class="container-fluid bg-dark text-white mt-5 py-5 px-sm-3 px-md-5">
+    <div class="row pt-5">
+        <div class="col-lg-7 col-md-6">
+            <div class="row">
+                <div class="col-md-6 mb-5">
+                    <h3 class="text-primary mb-4">Get In Touch</h3>
+                    <p><i class="fa fa-map-marker-alt mr-2"></i>Iqra Compound Adhartala, Jabalpur, India</p>
+                    <p><i class="fa fa-phone-alt mr-2"></i>+91 79993 19196</p>
+                    <p><i class="fa fa-phone-alt mr-2"></i>+91 72183 37339</p>
+                    <p><i class="fa fa-envelope mr-2"></i>sales@qmmerchant.com</p>
+                    <p><i class="fa fa-envelope mr-2"></i>exports@qmmerchant.com</p>
+                    <div class="d-flex justify-content-start mt-4">
+                        <a class="btn btn-outline-light btn-social mr-2" href="#"><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-outline-light btn-social mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light btn-social mr-2" href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a class="btn btn-outline-light btn-social mr-2" href="#"><i class="fab fa-instagram"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-5">
+                    <h3 class="text-primary mb-4">Quick Links</h3>
+                    <div class="d-flex flex-column justify-content-start">
+                        <a class="text-white mb-2" href="#home"><i class="fa fa-angle-right mr-2"></i>Home</a>
+                        <a class="text-white mb-2" href="about.html"><i class="fa fa-angle-right mr-2"></i>About Us</a>
+                        <a class="text-white mb-2" href="products.html"><i class="fa fa-angle-right mr-2"></i>Products</a>
+                        <a class="text-white mb-2" href="#team"><i class="fa fa-angle-right mr-2"></i>Our Team</a>
+                        <a class="text-white mb-2" href="#clients"><i class="fa fa-angle-right mr-2"></i>Our Clients</a>
+                        <a class="text-white" href="#contact"><i class="fa fa-angle-right mr-2"></i>Contact Us</a>
+                    </div>
+                    
+                    <h3 class="text-primary mt-4 mb-3">Our Products</h3>
+                    <div class="d-flex flex-column justify-content-start">
+                        <a class="text-white mb-1" href="#products"><i class="fa fa-angle-right mr-2"></i>Spices</a>
+                        <a class="text-white mb-1" href="#products"><i class="fa fa-angle-right mr-2"></i>Rice</a>
+                        <a class="text-white" href="#products"><i class="fa fa-angle-right mr-2"></i>Pulses</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-5 col-md-6 mb-5">
+            <h3 class="text-primary mb-4">About QM Merchant International</h3>
+            <p>QM Merchant International Pvt. Ltd. is a leading exporter of premium quality spices, rice, and pulses from India. With over 15 years of experience, we serve clients across 15+ countries worldwide.</p>
+            
+            <div class="d-flex mb-3">
+                <div class="mr-3">
+                    <i class="fas fa-pepper-hot text-primary"></i>
+                    <span class="text-white ml-2">Spices</span>
+                </div>
+                <div class="mr-3">
+                    <i class="fas fa-wheat-alt text-primary"></i>
+                    <span class="text-white ml-2">Rice</span>
+                </div>
+                <div>
+                    <i class="fas fa-seedling text-primary"></i>
+                    <span class="text-white ml-2">Pulses</span>
+                </div>
+            </div>
+            
+            <h5 class="text-primary mb-3">Business Hours</h5>
+            <p class="mb-1">Monday - Friday: 9:00 AM - 6:00 PM</p>
+            <p class="mb-1">Saturday: 9:00 AM - 2:00 PM</p>
+            <p>Sunday: Closed</p>
+            
+           
+        </div>
+    </div>
+</div>
 
-    <!-- Footer Start -->
-    <div class="container-fluid bg-dark text-white mt-5 py-5 px-sm-3 px-md-5">
-        <div class="row pt-5">
-            <div class="col-lg-7 col-md-6">
-                <div class="row">
-                    <div class="col-md-6 mb-5">
-                        <h3 class="text-primary mb-4">Get In Touch</h3>
-                        <p><i class="fa fa-map-marker-alt mr-2"></i>123 Street, New York, USA</p>
-                        <p><i class="fa fa-phone-alt mr-2"></i>+012 345 67890</p>
-                        <p><i class="fa fa-envelope mr-2"></i>info@example.com</p>
-                        <div class="d-flex justify-content-start mt-4">
-                            <a class="btn btn-outline-light btn-social mr-2" href="#"><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-outline-light btn-social mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-outline-light btn-social mr-2" href="#"><i class="fab fa-linkedin-in"></i></a>
-                            <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-instagram"></i></a>
-                        </div>
-                    </div>
-                    <div class="col-md-6 mb-5">
-                        <h3 class="text-primary mb-4">Quick Links</h3>
-                        <div class="d-flex flex-column justify-content-start">
-                            <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Home</a>
-                            <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>About Us</a>
-                            <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Our Services</a>
-                            <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Pricing Plan</a>
-                            <a class="text-white" href="#"><i class="fa fa-angle-right mr-2"></i>Contact Us</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-5 col-md-6 mb-5">
-                <h3 class="text-primary mb-4">Newsletter</h3>
-                <p>Rebum labore lorem dolores kasd est, et ipsum amet et at kasd, ipsum sea tempor magna tempor. Accu kasd sed ea duo ipsum. Dolor duo eirmod sea justo no lorem est diam</p>
-                <div class="w-100">
-                    <div class="input-group">
-                        <input type="text" class="form-control border-light" style="padding: 30px;" placeholder="Your Email Address">
-                        <div class="input-group-append">
-                            <button class="btn btn-primary px-4">Sign Up</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
+<div class="container-fluid bg-dark text-white border-top py-4 px-sm-3 px-md-5" style="border-color: #3E3E4E !important;">
+    <div class="row">
+        <div class="col-lg-6 text-center text-md-left mb-3 mb-md-0">
+            <p class="m-0 text-white">&copy; <a href="#" class="text-primary">QM Merchant International Pvt. Ltd.</a>. All Rights Reserved. 
+            Established 2025</p>
         </div>
+       
     </div>
-    <div class="container-fluid bg-dark text-white border-top py-4 px-sm-3 px-md-5" style="border-color: #3E3E4E !important;">
-        <div class="row">
-            <div class="col-lg-6 text-center text-md-left mb-3 mb-md-0">
-                <p class="m-0 text-white">&copy; <a href="#">Your Site Name</a>. All Rights Reserved. 
-				
-				<!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-				Designed by <a href="https://htmlcodex.com">HTML Codex</a>
-                </p>
-            </div>
-            <div class="col-lg-6 text-center text-md-right">
-                <ul class="nav d-inline-flex">
-                    <li class="nav-item">
-                        <a class="nav-link text-white py-0" href="#">Privacy</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white py-0" href="#">Terms</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white py-0" href="#">FAQs</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white py-0" href="#">Help</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <!-- Footer End -->
+</div>
+<!-- Footer End -->
 
 
     <!-- Back to Top -->
