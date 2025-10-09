@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
-    <title>QM Merchant International - Premium Agricultural Products</title>
+    <title>Products - QM Merchant International</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="QM Merchant International, Spices, Rice, Pulses, Exporters" name="keywords">
-    <meta content="QM Merchant International - Premium quality spices, rice, and pulses exporters from India" name="description">
+    <meta content="Premium Spices, Rice, Pulses - QM Merchant International Products" name="keywords">
+    <meta content="Explore our premium quality spices, rice, and pulses. Turmeric, Basmati Rice, Chickpeas, Red Chili Powder and more." name="description">
 
     <!-- Favicon -->
     <link href="img/favicon.ico" rel="icon">
@@ -25,20 +24,31 @@
     <link href="css/style.css" rel="stylesheet">
     
     <style>
-        .product-section {
-            padding: 100px 0 50px;
+        /* Global Mobile Fixes */
+        body {
+            overflow-x: hidden;
         }
         
+        .container, .container-fluid {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+
+        /* Product Page Specific Styles */
         .product-hero {
-            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('img/products-bg.jpg');
             background-size: cover;
             background-position: center;
-            color: white;
-            padding: 100px 0;
+            background-attachment: fixed;
+        }
+        
+        .product-section {
+            padding: 5rem 0;
         }
         
         .zigzag-item {
-            margin: 80px 0;
+            margin-bottom: 6rem;
+            padding: 2rem 0;
         }
         
         .zigzag-item:nth-child(even) .row {
@@ -46,8 +56,10 @@
         }
         
         .product-image {
-            border-radius: 15px;
-            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+            height: 400px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
             transition: transform 0.3s ease;
         }
         
@@ -56,52 +68,382 @@
         }
         
         .product-content {
-            padding: 30px;
+            padding: 2rem;
         }
         
-        .product-features {
-            list-style: none;
-            padding: 0;
+        /* Enhanced Product Styles */
+        .product-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #f75c14, #f75c14);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+            box-shadow: 0 4px 15px rgba(230, 132, 28, 0.563);
         }
-        
-        .product-features li {
-            padding: 8px 0;
-            border-bottom: 1px solid #f0f0f0;
+
+        .product-intro {
+            font-size: 1.1rem;
+            color: #6c757d;
+            font-weight: 500;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
         }
-        
-        .product-features li:last-child {
-            border-bottom: none;
-        }
-        
-        .product-features i {
-            color: #FF6B35;
-            margin-right: 10px;
-        }
-        
-        .specs-table {
+
+        .product-description {
             background: #f8f9fa;
+            padding: 1.5rem;
             border-radius: 10px;
-            padding: 20px;
-            margin-top: 20px;
+            border-left: 4px solid #f75c14;
+            margin: 1rem 0;
         }
-        
-        .specs-table td {
-            padding: 8px 0;
-            border-bottom: 1px solid #dee2e6;
+
+        .product-description h5 {
+            font-weight: 600;
+            color: #f75c14;
         }
-        
-        .specs-table tr:last-child td {
-            border-bottom: none;
+
+        .product-highlights {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            border: 2px solid #e9ecef;
+            margin: 1rem 0;
         }
-        
-        @media (max-width: 768px) {
+
+        .product-highlights h5 {
+            color: #f75c14;
+        }
+
+        .highlight-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+            padding: 0.5rem 0;
+        }
+
+        .highlight-item i {
+            font-size: 1.2rem;
+            margin-right: 12px;
+            width: 24px;
+            text-align: center;
+            color: #ff9d00;
+        }
+
+        .highlight-item span {
+            font-weight: 500;
+            color: #495057;
+        }
+
+        .product-usage {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            border: 2px solid #e9ecef;
+            margin: 1rem 0;
+        }
+
+        .product-usage h5 {
+            color: #f75c14;
+        }
+
+        .usage-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .usage-tag {
+            background: #fff3e0;
+            color: #f75c14;
+            padding: 6px 15px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            border: 1px solid #ffd8a6;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #f75c14, #f75c14);
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(247, 141, 20, 0.3);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(247, 141, 20, 0.4);
+            background: linear-gradient(135deg, #f75c14, #f75c14);
+            color: white;
+        }
+
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            display: none;
+            right: 30px;
+            bottom: 30px;
+            z-index: 99;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #f75c14, #f75c14);
+            color: white;
+            border: none;
+            box-shadow: 0 4px 15px rgba(247, 141, 20, 0.4);
+            transition: all 0.3s ease;
+        }
+
+        .back-to-top:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(247, 141, 20, 0.6);
+        }
+
+        /* Mobile Responsive Styles */
+        @media (max-width: 991.98px) {
             .zigzag-item:nth-child(even) .row {
                 flex-direction: column;
             }
             
-            .product-content {
-                padding: 20px 0;
+            .product-image {
+                height: 300px;
+                margin-bottom: 2rem;
             }
+            
+            .product-content {
+                padding: 1rem 0;
+            }
+            
+            .product-section {
+                padding: 3rem 0;
+            }
+            
+            .zigzag-item {
+                margin-bottom: 4rem;
+                padding: 1rem 0;
+            }
+            
+            .display-3 {
+                font-size: 2.5rem !important;
+            }
+
+            .product-description,
+            .product-highlights,
+            .product-usage {
+                padding: 1rem;
+                margin: 0.5rem 0;
+            }
+            
+            .highlight-item {
+                margin-bottom: 0.8rem;
+            }
+            
+            .usage-tags {
+                gap: 8px;
+            }
+            
+            .usage-tag {
+                font-size: 0.8rem;
+                padding: 5px 12px;
+            }
+            
+            .product-badge {
+                font-size: 0.8rem;
+                padding: 6px 15px;
+            }
+            
+            .btn-lg {
+                padding: 12px 24px;
+                font-size: 1rem;
+            }
+
+            /* Fix container margins */
+            .container {
+                max-width: 100%;
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+        }
+        
+        @media (max-width: 767.98px) {
+            .product-hero {
+                background-attachment: scroll;
+            }
+            
+            .product-image {
+                height: 250px;
+            }
+            
+            .btn {
+                width: 100%;
+                margin-top: 1rem;
+            }
+
+            .back-to-top {
+                right: 20px;
+                bottom: 20px;
+                width: 50px;
+                height: 50px;
+            }
+
+            /* Ensure proper spacing on mobile */
+            .row {
+                margin-left: 0;
+                margin-right: 0;
+            }
+
+            .col-lg-6, .col-md-6 {
+                padding-left: 0;
+                padding-right: 0;
+            }
+        }
+        
+        @media (max-width: 575.98px) {
+            .product-image {
+                height: 200px;
+            }
+            
+            .display-3 {
+                font-size: 2rem !important;
+            }
+            
+            .product-content {
+                padding: 1rem 0;
+            }
+            
+            .product-intro {
+                font-size: 1rem;
+            }
+            
+            .highlight-item {
+                font-size: 0.9rem;
+            }
+            
+            .usage-tags {
+                justify-content: center;
+            }
+
+            .back-to-top {
+                right: 15px;
+                bottom: 15px;
+                width: 45px;
+                height: 45px;
+                font-size: 0.9rem;
+            }
+
+            /* Extra small device fixes */
+            .container-fluid {
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+
+            .product-section {
+                padding: 2rem 0;
+            }
+        }
+
+        /* Header Mobile Styles */
+        @media (max-width: 991.98px) {
+            .navbar-brand {
+                margin-left: 0 !important;
+                padding: 5px 0;
+            }
+            
+            .navbar-brand img {
+                height: 50px !important;
+                width: 120px !important;
+            }
+            
+            .navbar-collapse {
+                background: white;
+                border-top: 1px solid #dee2e6;
+                margin-top: 10px;
+                padding: 15px;
+                box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            }
+            
+            .nav-item {
+                border-bottom: 1px solid #f8f9fa;
+            }
+            
+            .nav-item:last-child {
+                border-bottom: none;
+            }
+            
+            .nav-link {
+                padding: 12px 15px !important;
+                font-weight: 500;
+            }
+            
+            .mobile-quote-btn {
+                display: block !important;
+                margin: 15px 0 5px;
+                text-align: center;
+            }
+            
+            .mobile-contact-icons {
+                display: flex !important;
+                align-items: center;
+                gap: 15px;
+                margin-right: 15px;
+            }
+        }
+        
+        @media (max-width: 575.98px) {
+            .topbar-small {
+                font-size: 0.75rem;
+                text-align: left !important;
+            }
+            
+            .topbar-small .d-inline-flex {
+                justify-content: flex-start !important;
+            }
+            
+            .topbar-small .px-3 {
+                display: inline !important;
+            }
+            
+            .navbar-toggler-container {
+                display: flex;
+                align-items: center;
+                gap: 15px;
+            }
+        }
+        
+        @media (min-width: 992px) {
+            .mobile-quote-btn,
+            .mobile-contact-icons {
+                display: none !important;
+            }
+            
+            .topbar-content {
+                text-align: left !important;
+            }
+        }
+        
+        .topbar-content {
+            text-align: left;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        .mobile-contact-icons a {
+            color: #eb9029 !important;
+            font-size: 1.1rem;
+            transition: color 0.3s ease;
+        }
+        
+        .mobile-contact-icons a:hover {
+            color: #f75c14 !important;
         }
     </style>
 </head>
@@ -110,64 +452,64 @@
     <!-- Topbar Start -->
     <div class="container-fluid bg-dark">
         <div class="row py-2 px-lg-5">
-            <div class="col-lg-6 text-center text-lg-left mb-2 mb-lg-0">
+            <div class="col-lg-6 text-left text-lg-left mb-2 mb-lg-0 topbar-small topbar-content">
                 <div class="d-inline-flex align-items-center text-white">
-                    <small><i class="fa fa-phone-alt mr-2"></i>+91 79993 19196</small>
+                    <small><i class="fa fa-phone-alt mr-2"></i>+91 7218337339 | +91 79993 19196</small>
                     <small class="px-3">|</small>
                     <small><i class="fa fa-envelope mr-2"></i>sales@qmmerchant.com</small>
                 </div>
             </div>
-            <!-- <div class="col-lg-6 text-center text-lg-right">
-                <div class="d-inline-flex align-items-center">
-                    <a class="text-white px-2" href="">
-                        <i class="fab fa-facebook-f"></i>
-                    </a>
-                    <a class="text-white px-2" href="">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                    <a class="text-white px-2" href="">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
-                    <a class="text-white px-2" href="">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a class="text-white pl-2" href="">
-                        <i class="fab fa-youtube"></i>
-                    </a>
-                </div>
-            </div> -->
         </div>
     </div>
     <!-- Topbar End -->
 
     <!-- Navbar Start -->
-    <div class="container-fluid p-0">
-        <nav class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-lg-5">
+    <div class="container-fluid p-0 sticky-top" style="background: white;">
+        <nav class="navbar navbar-expand-lg bg-light navbar-light py-2 py-lg-1 px-lg-5">
             <a href="index.html" class="navbar-brand ml-lg-3">
-            <img src="img/logo.png" alt="Faster Logo" class="img-fluid" style="height: 75px;width: 150px;">
+                <img src="img/logo.png" alt="QM Merchant International Logo" class="img-fluid" style="height: 65px; width: 140px;">
             </a>
-            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+            
+            <!-- Mobile Contact Icons -->
+            <div class="navbar-toggler-container d-lg-none">
+                <div class="mobile-contact-icons">
+                    <a href="tel:+917999319196" class="text-primary" title="Call Us">
+                        <i class="fa fa-phone-alt"></i>
+                    </a>
+                    <a href="mailto:sales@qmmerchant.com" class="text-primary" title="Email Us">
+                        <i class="fa fa-envelope"></i>
+                    </a>
+                </div>
+                
+                <button type="button" class="navbar-toggler border-0" data-toggle="collapse" data-target="#navbarCollapse" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+            
             <div class="collapse navbar-collapse justify-content-between px-lg-3" id="navbarCollapse">
                 <div class="navbar-nav m-auto py-0">
                     <a href="index.html" class="nav-item nav-link">Home</a>
                     <a href="about.html" class="nav-item nav-link">About US</a>
                     <a href="products.html" class="nav-item nav-link active">Products</a>
-                    <a href="team.html" class="nav-item nav-link">Our Team</a>
-                    <a href="clients.html" class="nav-item nav-link">Clients</a>
+                    <a href="price.html" class="nav-item nav-link">Payment Terms</a>
+                    <a href="blog.html" class="nav-item nav-link">Blog Grid</a>
                     <a href="contact.html" class="nav-item nav-link">Contact</a>
+                    
+                    <div class="d-lg-none mobile-quote-btn">
+                        <a href="index.html#quoteSection" class="btn btn-primary btn-block py-2">Get A Quote</a>
+                    </div>
                 </div>
-                <a href="contact.html" class="btn btn-primary py-2 px-4 d-none d-lg-block">Get A Quote</a>
+                
+                <a href="index.html#quoteSection" class="btn btn-primary py-2 px-4 d-none d-lg-block">Get A Quote</a>
             </div>
         </nav>
     </div>
     <!-- Navbar End -->
 
-    <!-- Product Hero Start -->
-    <div class="product-hero">
+    <!-- Header Start -->
+    <div class="jumbotron jumbotron-fluid mb-5">
         <div class="container text-center py-5">
-            <h1 class="text-white display-3 mb-3">Our Premium Products</h1>
+            <h1 class="text-white display-3">Our Premium Products</h1>
             <div class="d-inline-flex align-items-center text-white">
                 <p class="m-0"><a class="text-white" href="index.html">Home</a></p>
                 <i class="fa fa-circle px-3"></i>
@@ -175,284 +517,272 @@
             </div>
         </div>
     </div>
-    <!-- Product Hero End -->
+    <!-- Header End -->
 
     <!-- Products Section Start -->
     <div class="container-fluid product-section">
         <div class="container">
-            <!-- Premium Turmeric -->
-            <div class="zigzag-item">
-                <div class="row align-items-center">
-                    <div class="col-lg-6">
-                        <img src="img/termaric.jpg" class="img-fluid w-100 product-image" alt="Premium Turmeric">
-                    </div>
-                    <div class="col-lg-6 product-content">
-                        <h6 class="text-primary text-uppercase font-weight-bold">Spices</h6>
-                        <h2 class="mb-4">Premium Turmeric</h2>
-                        <p class="mb-4">Our premium turmeric is sourced from the finest farms in India, known for its rich golden color and high curcumin content. Perfect for culinary and medicinal purposes.</p>
-                        
-                        <ul class="product-features mb-4">
-                            <li><i class="fas fa-check"></i> Rich golden color with high curcumin content</li>
-                            <li><i class="fas fa-check"></i> Direct sourcing from trusted farms</li>
-                            <li><i class="fas fa-check"></i> Natural and chemical-free processing</li>
-                            <li><i class="fas fa-check"></i> Available in powder and root forms</li>
-                        </ul>
-                        
-                        <div class="specs-table">
-                            <h6 class="text-primary mb-3">Product Specifications</h6>
-                            <table class="w-100">
-                                <tr>
-                                    <td><strong>Color:</strong></td>
-                                    <td>Bright Golden Yellow</td>
-                                </tr>
-                                <tr>
-                                    <td><strong>Curcumin Content:</strong></td>
-                                    <td>3-5% Minimum</td>
-                                </tr>
-                                <tr>
-                                    <td><strong>Moisture:</strong></td>
-                                    <td>10% Maximum</td>
-                                </tr>
-                                <tr>
-                                    <td><strong>Packaging:</strong></td>
-                                    <td>Customized as per requirement</td>
-                                </tr>
-                            </table>
-                        </div>
-                        
-                        <a href="contact.html" class="btn btn-primary mt-3 py-2 px-4">Request Quote</a>
-                    </div>
-                </div>
+<!-- Premium Turmeric -->
+<div class="zigzag-item">
+    <div class="row align-items-center">
+        <div class="col-lg-6">
+            <img src="img/termaric.jpg" class="img-fluid w-100 product-image" alt="Premium Turmeric">
+        </div>
+        <div class="col-lg-6 product-content">
+            <div class="product-badge">Spices</div>
+            <h2 class="mb-3">Premium Turmeric</h2>
+            <p class="product-intro">Experience the golden goodness of our premium turmeric, sourced from the finest farms across India. Known for its vibrant color and exceptional purity.</p>
+            
+            <div class="product-description">
+                <h5 class="mb-3">Product Description</h5>
+                <p>Our premium turmeric is carefully selected from the best growing regions in India, ensuring superior quality and potency. With its rich golden-yellow color and high curcumin content (3-5%), this turmeric is perfect for both culinary and medicinal applications.</p>
+                
+                <p>We offer both powder and root forms to meet diverse customer needs. The powder is finely ground to ensure easy mixing and maximum flavor release, while the roots are sun-dried to preserve their natural oils and medicinal properties.</p>
             </div>
+            
+            <a href="contact.html" class="btn btn-primary btn-lg mt-3 py-2 px-4">
+                <i class="fas fa-file-invoice-dollar mr-2"></i>Request Quote
+            </a>
+        </div>
+    </div>
+</div>
 
-            <!-- Basmati Rice -->
-            <div class="zigzag-item">
-                <div class="row align-items-center">
-                    <div class="col-lg-6">
-                        <img src="img/rise.jpg" class="img-fluid w-100 product-image" alt="Basmati Rice">
-                    </div>
-                    <div class="col-lg-6 product-content">
-                        <h6 class="text-primary text-uppercase font-weight-bold">Rice</h6>
-                        <h2 class="mb-4">Basmati Rice</h2>
-                        <p class="mb-4">Premium long-grain Basmati rice known for its distinctive aroma and delicate flavor. Grown in the foothills of the Himalayas, our Basmati rice is perfect for biryanis and pulao.</p>
-                        
-                        <ul class="product-features mb-4">
-                            <li><i class="fas fa-check"></i> Long grain aromatic rice for premium dishes</li>
-                            <li><i class="fas fa-check"></i> Extra long grains with natural fragrance</li>
-                            <li><i class="fas fa-check"></i> Low starch content for non-sticky texture</li>
-                            <li><i class="fas fa-check"></i> Aged for enhanced flavor and aroma</li>
-                        </ul>
-                        
-                        <div class="specs-table">
-                            <h6 class="text-primary mb-3">Product Specifications</h6>
-                            <table class="w-100">
-                                <tr>
-                                    <td><strong>Grain Length:</strong></td>
-                                    <td>8.3 mm Minimum</td>
-                                </tr>
-                                <tr>
-                                    <td><strong>Broken Grains:</strong></td>
-                                    <td>2% Maximum</td>
-                                </tr>
-                                <tr>
-                                    <td><strong>Moisture:</strong></td>
-                                    <td>14% Maximum</td>
-                                </tr>
-                                <tr>
-                                    <td><strong>Aroma:</strong></td>
-                                    <td>Natural Basmati Fragrance</td>
-                                </tr>
-                            </table>
-                        </div>
-                        
-                        <a href="contact.html" class="btn btn-primary mt-3 py-2 px-4">Request Quote</a>
-                    </div>
-                </div>
+<!-- Basmati Rice -->
+<div class="zigzag-item">
+    <div class="row align-items-center">
+        <div class="col-lg-6">
+            <img src="img/rise.jpg" class="img-fluid w-100 product-image" alt="Basmati Rice">
+        </div>
+        <div class="col-lg-6 product-content">
+            <div class="product-badge">Rice</div>
+            <h2 class="mb-3">Premium Basmati Rice</h2>
+            <p class="product-intro">Discover the exquisite aroma and delicate flavor of our premium Basmati rice, grown in the foothills of the Himalayas and aged to perfection.</p>
+            
+            <div class="product-description">
+                <h5 class="mb-3">Product Description</h5>
+                <p>Our Basmati rice is the epitome of quality and tradition. Each grain is extra-long (minimum 8.3mm), slender, and aromatic, offering a delightful eating experience. The rice is carefully aged for 1-2 years to enhance its natural fragrance and ensure non-sticky, separate grains when cooked.</p>
+                
+                <p>Perfect for biryanis, pulao, and other gourmet dishes, our Basmati rice maintains its length and fluffiness even after cooking. The low starch content ensures perfect texture every time, making it a favorite among chefs and home cooks worldwide.</p>
             </div>
+            
+            <a href="contact.html" class="btn btn-primary btn-lg mt-3 py-2 px-4">
+                <i class="fas fa-file-invoice-dollar mr-2"></i>Request Quote
+            </a>
+        </div>
+    </div>
+</div>
 
-            <!-- Chickpeas -->
-            <div class="zigzag-item">
-                <div class="row align-items-center">
-                    <div class="col-lg-6">
-                        <img src="img/chickpeas.jpg" class="img-fluid w-100 product-image" alt="Chickpeas">
-                    </div>
-                    <div class="col-lg-6 product-content">
-                        <h6 class="text-primary text-uppercase font-weight-bold">Pulses</h6>
-                        <h2 class="mb-4">Chickpeas</h2>
-                        <p class="mb-4">High-quality chickpeas packed with protein and essential nutrients. Perfect for making hummus, curries, salads, and various traditional dishes across global cuisines.</p>
-                        
-                        <ul class="product-features mb-4">
-                            <li><i class="fas fa-check"></i> High protein chickpeas for healthy nutrition</li>
-                            <li><i class="fas fa-check"></i> Rich in fiber and essential minerals</li>
-                            <li><i class="fas fa-check"></i> Cleaned and sorted for premium quality</li>
-                            <li><i class="fas fa-check"></i> Available in Kabuli and Desi varieties</li>
-                        </ul>
-                        
-                        <div class="specs-table">
-                            <h6 class="text-primary mb-3">Product Specifications</h6>
-                            <table class="w-100">
-                                <tr>
-                                    <td><strong>Protein Content:</strong></td>
-                                    <td>19-22%</td>
-                                </tr>
-                                <tr>
-                                    <td><strong>Moisture:</strong></td>
-                                    <td>10% Maximum</td>
-                                </tr>
-                                <tr>
-                                    <td><strong>Foreign Matter:</strong></td>
-                                    <td>1% Maximum</td>
-                                </tr>
-                                <tr>
-                                    <td><strong>Size:</strong></td>
-                                    <td>8mm+ (Kabuli), 6-8mm (Desi)</td>
-                                </tr>
-                            </table>
-                        </div>
-                        
-                        <a href="contact.html" class="btn btn-primary mt-3 py-2 px-4">Request Quote</a>
-                    </div>
-                </div>
+<!-- Chickpeas -->
+<div class="zigzag-item">
+    <div class="row align-items-center">
+        <div class="col-lg-6">
+            <img src="img/chickpeas1.jpg" class="img-fluid w-100 product-image" alt="Chickpeas">
+        </div>
+        <div class="col-lg-6 product-content">
+            <div class="product-badge">Pulses</div>
+            <h2 class="mb-3">Premium Chickpeas</h2>
+            <p class="product-intro">Nutrient-rich chickpeas packed with protein and essential minerals, perfect for healthy meals and traditional dishes across global cuisines.</p>
+            
+            <div class="product-description">
+                <h5 class="mb-3">Product Description</h5>
+                <p>Our premium chickpeas are carefully selected for their uniform size, excellent texture, and high nutritional value. With a protein content of 19-22%, they are an excellent source of plant-based protein and dietary fiber. Available in both Kabuli (large, cream-colored) and Desi (smaller, darker) varieties to suit different culinary needs.</p>
+                
+                <p>Each batch undergoes rigorous quality checks to ensure minimal foreign matter and optimal moisture content. The chickpeas are cleaned, sorted, and packaged to maintain their freshness and nutritional integrity.</p>
             </div>
+            
+            <a href="contact.html" class="btn btn-primary btn-lg mt-3 py-2 px-4">
+                <i class="fas fa-file-invoice-dollar mr-2"></i>Request Quote
+            </a>
+        </div>
+    </div>
+</div>
 
-            <!-- Red Chili Powder -->
-            <div class="zigzag-item">
-                <div class="row align-items-center">
-                    <div class="col-lg-6">
-                        <img src="img/red-chili.jpg" class="img-fluid w-100 product-image" alt="Red Chili Powder">
-                    </div>
-                    <div class="col-lg-6 product-content">
-                        <h6 class="text-primary text-uppercase font-weight-bold">Spices</h6>
-                        <h2 class="mb-4">Red Chili Powder</h2>
-                        <p class="mb-4">Vibrant red chili powder made from premium quality dried red chilies. Known for its perfect balance of heat, color, and flavor that enhances any dish.</p>
-                        
-                        <ul class="product-features mb-4">
-                            <li><i class="fas fa-check"></i> Spicy and vibrant red chili powder</li>
-                            <li><i class="fas fa-check"></i> Rich color with balanced heat level</li>
-                            <li><i class="fas fa-check"></i> Made from sun-dried premium chilies</li>
-                            <li><i class="fas fa-check"></i> Perfect for curries and marinades</li>
-                        </ul>
-                        
-                        <div class="specs-table">
-                            <h6 class="text-primary mb-3">Product Specifications</h6>
-                            <table class="w-100">
-                                <tr>
-                                    <td><strong>Color Value:</strong></td>
-                                    <td>ASTA 80-100</td>
-                                </tr>
-                                <tr>
-                                    <td><strong>Scoville Heat:</strong></td>
-                                    <td>30,000-50,000 SHU</td>
-                                </tr>
-                                <tr>
-                                    <td><strong>Moisture:</strong></td>
-                                    <td>10% Maximum</td>
-                                </tr>
-                                <tr>
-                                    <td><strong>Mesh Size:</strong></td>
-                                    <td>60-80 Mesh</td>
-                                </tr>
-                            </table>
-                        </div>
-                        
-                        <a href="contact.html" class="btn btn-primary mt-3 py-2 px-4">Request Quote</a>
-                    </div>
-                </div>
+<!-- Red Chili Powder -->
+<div class="zigzag-item">
+    <div class="row align-items-center">
+        <div class="col-lg-6">
+            <img src="img/red-chili.jpg" class="img-fluid w-100 product-image" alt="Red Chili Powder">
+        </div>
+        <div class="col-lg-6 product-content">
+            <div class="product-badge">Spices</div>
+            <h2 class="mb-3">Red Chili Powder</h2>
+            <p class="product-intro">Add vibrant color and perfect heat to your dishes with our premium red chili powder, made from sun-dried quality chilies.</p>
+            
+            <div class="product-description">
+                <h5 class="mb-3">Product Description</h5>
+                <p>Our red chili powder is crafted from carefully selected dried red chilies that are known for their perfect balance of heat, color, and flavor. With an ASTA color value of 80-100 and Scoville heat units ranging from 30,000-50,000 SHU, this chili powder adds both visual appeal and authentic spice to your dishes.</p>
+                
+                <p>The chilies are sun-dried to preserve their natural oils and then ground to a fine 60-80 mesh consistency, ensuring even distribution and consistent flavor in every dish. Perfect for curries, marinades, sauces, and seasoning blends.</p>
             </div>
+            
+            <a href="contact.html" class="btn btn-primary btn-lg mt-3 py-2 px-4">
+                <i class="fas fa-file-invoice-dollar mr-2"></i>Request Quote
+            </a>
+        </div>
+    </div>
+</div>
 
-            <!-- Sona Masoori Rice -->
-            <div class="zigzag-item">
-                <div class="row align-items-center">
-                    <div class="col-lg-6">
-                        <img src="img/sona-masoori.jpg" class="img-fluid w-100 product-image" alt="Sona Masoori Rice">
-                    </div>
-                    <div class="col-lg-6 product-content">
-                        <h6 class="text-primary text-uppercase font-weight-bold">Rice</h6>
-                        <h2 class="mb-4">Sona Masoori Rice</h2>
-                        <p class="mb-4">Medium-grain Sona Masoori rice, a popular choice for daily consumption. Known for its light texture and quick cooking properties, perfect for everyday meals.</p>
-                        
-                        <ul class="product-features mb-4">
-                            <li><i class="fas fa-check"></i> Medium grain rice perfect for daily meals</li>
-                            <li><i class="fas fa-check"></i> Light and fluffy when cooked</li>
-                            <li><i class="fas fa-check"></i> Quick cooking and easy to digest</li>
-                            <li><i class="fas fa-check"></i> Ideal for South Indian dishes</li>
-                        </ul>
-                        
-                        <div class="specs-table">
-                            <h6 class="text-primary mb-3">Product Specifications</h6>
-                            <table class="w-100">
-                                <tr>
-                                    <td><strong>Grain Type:</strong></td>
-                                    <td>Medium Slender</td>
-                                </tr>
-                                <tr>
-                                    <td><strong>Broken Grains:</strong></td>
-                                    <td>3% Maximum</td>
-                                </tr>
-                                <tr>
-                                    <td><strong>Moisture:</strong></td>
-                                    <td>14% Maximum</td>
-                                </tr>
-                                <tr>
-                                    <td><strong>Cooking Time:</strong></td>
-                                    <td>15-20 Minutes</td>
-                                </tr>
-                            </table>
-                        </div>
-                        
-                        <a href="contact.html" class="btn btn-primary mt-3 py-2 px-4">Request Quote</a>
-                    </div>
-                </div>
+<!-- Sona Masoori Rice -->
+<div class="zigzag-item">
+    <div class="row align-items-center">
+        <div class="col-lg-6">
+            <img src="img/sona-masoori.jpg" class="img-fluid w-100 product-image" alt="Sona Masoori Rice">
+        </div>
+        <div class="col-lg-6 product-content">
+            <div class="product-badge">Rice</div>
+            <h2 class="mb-3">Sona Masoori Rice</h2>
+            <p class="product-intro">Light, fluffy, and quick-cooking medium-grain rice perfect for everyday meals and South Indian delicacies.</p>
+            
+            <div class="product-description">
+                <h5 class="mb-3">Product Description</h5>
+                <p>Sona Masoori rice is a popular medium-grain variety known for its light texture and excellent cooking properties. This rice cooks quickly (15-20 minutes) and results in soft, separate grains that are easy to digest. Its neutral flavor makes it versatile for various culinary applications.</p>
+                
+                <p>Ideal for daily consumption, this rice is particularly favored in South Indian cuisine for dishes like idli, dosa, and pongal. The grains are carefully processed to ensure minimal breakage and optimal moisture content for long shelf life.</p>
             </div>
+            
+            <a href="contact.html" class="btn btn-primary btn-lg mt-3 py-2 px-4">
+                <i class="fas fa-file-invoice-dollar mr-2"></i>Request Quote
+            </a>
+        </div>
+    </div>
+</div>
 
-            <!-- Lentils -->
-            <div class="zigzag-item">
-                <div class="row align-items-center">
-                    <div class="col-lg-6">
-                        <img src="img/lentils.jpg" class="img-fluid w-100 product-image" alt="Lentils">
-                    </div>
-                    <div class="col-lg-6 product-content">
-                        <h6 class="text-primary text-uppercase font-weight-bold">Pulses</h6>
-                        <h2 class="mb-4">Lentils (Masoor)</h2>
-                        <p class="mb-4">Nutritious lentils that are a staple in many cuisines worldwide. Rich in protein and fiber, our lentils are perfect for soups, stews, and traditional dal preparations.</p>
-                        
-                        <ul class="product-features mb-4">
-                            <li><i class="fas fa-check"></i> Nutritious lentils for soups and curries</li>
-                            <li><i class="fas fa-check"></i> High protein and dietary fiber content</li>
-                            <li><i class="fas fa-check"></i> Quick cooking and easy to prepare</li>
-                            <li><i class="fas fa-check"></i> Available in whole and split forms</li>
-                        </ul>
-                        
-                        <div class="specs-table">
-                            <h6 class="text-primary mb-3">Product Specifications</h6>
-                            <table class="w-100">
-                                <tr>
-                                    <td><strong>Protein Content:</strong></td>
-                                    <td>24-26%</td>
-                                </tr>
-                                <tr>
-                                    <td><strong>Moisture:</strong></td>
-                                    <td>12% Maximum</td>
-                                </tr>
-                                <tr>
-                                    <td><strong>Foreign Matter:</strong></td>
-                                    <td>1% Maximum</td>
-                                </tr>
-                                <tr>
-                                    <td><strong>Color:</strong></td>
-                                    <td>Orange-Red (Split), Brown (Whole)</td>
-                                </tr>
-                            </table>
-                        </div>
-                        
-                        <a href="contact.html" class="btn btn-primary mt-3 py-2 px-4">Request Quote</a>
-                    </div>
-                </div>
+<!-- Lentils -->
+<div class="zigzag-item">
+    <div class="row align-items-center">
+        <div class="col-lg-6">
+            <img src="img/lentils.jpg" class="img-fluid w-100 product-image" alt="Lentils">
+        </div>
+        <div class="col-lg-6 product-content">
+            <div class="product-badge">Pulses</div>
+            <h2 class="mb-3">Lentils (Masoor)</h2>
+            <p class="product-intro">Nutrient-dense lentils that are a staple in global cuisines, rich in protein and perfect for quick, healthy meals.</p>
+            
+            <div class="product-description">
+                <h5 class="mb-3">Product Description</h5>
+                <p>Our lentils are a powerhouse of nutrition, offering 24-26% protein content along with essential dietary fiber. Available in both whole (brown) and split (orange-red) forms, these lentils cook quickly and are incredibly versatile in various culinary preparations.</p>
+                
+                <p>Perfect for traditional dal preparations, soups, stews, and salads, our lentils are cleaned and sorted to ensure premium quality with minimal foreign matter. They absorb flavors beautifully while maintaining their texture.</p>
             </div>
+            
+            <a href="contact.html" class="btn btn-primary btn-lg mt-3 py-2 px-4">
+                <i class="fas fa-file-invoice-dollar mr-2"></i>Request Quote
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- Coriander Powder -->
+<div class="zigzag-item">
+    <div class="row align-items-center">
+        <div class="col-lg-6">
+            <img src="img/coriander.jpg" class="img-fluid w-100 product-image" alt="Coriander Powder">
+        </div>
+        <div class="col-lg-6 product-content">
+            <div class="product-badge">Spices</div>
+            <h2 class="mb-3">Coriander Powder</h2>
+            <p class="product-intro">Aromatic coriander powder with a warm, citrusy flavor that enhances the taste of curries, marinades, and spice blends.</p>
+            
+            <div class="product-description">
+                <h5 class="mb-3">Product Description</h5>
+                <p>Our coriander powder is made from high-quality coriander seeds that are carefully roasted and ground to perfection. This process enhances the natural aroma and flavor while maintaining the essential oils that give coriander its distinctive taste.</p>
+                
+                <p>The powder has a warm, nutty, and citrusy flavor profile that complements a wide range of dishes. It's an essential ingredient in curry powders, garam masala, and various spice blends used in Indian, Middle Eastern, and Mediterranean cuisines.</p>
+            </div>
+            
+            <a href="contact.html" class="btn btn-primary btn-lg mt-3 py-2 px-4">
+                <i class="fas fa-file-invoice-dollar mr-2"></i>Request Quote
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- Toor Dal -->
+<div class="zigzag-item">
+    <div class="row align-items-center">
+        <div class="col-lg-6">
+            <img src="img/toordal.jpg" class="img-fluid w-100 product-image" alt="Toor Dal">
+        </div>
+        <div class="col-lg-6 product-content">
+            <div class="product-badge">Pulses</div>
+            <h2 class="mb-3">Toor Dal (Pigeon Peas)</h2>
+            <p class="product-intro">Premium quality Toor Dal, a staple in Indian kitchens known for its rich flavor and high nutritional value.</p>
+            
+            <div class="product-description">
+                <h5 class="mb-3">Product Description</h5>
+                <p>Toor Dal, also known as Pigeon Peas, is one of the most popular lentils in Indian cuisine. Our premium Toor Dal is carefully processed to remove impurities and ensure uniform size and color. It has a mild, nutty flavor and creamy texture when cooked.</p>
+                
+                <p>Rich in protein, fiber, and essential nutrients, Toor Dal is perfect for making traditional Indian dal, sambar, and various other dishes. It cooks relatively quickly and absorbs flavors well, making it versatile for different culinary applications.</p>
+            </div>
+            
+            <a href="contact.html" class="btn btn-primary btn-lg mt-3 py-2 px-4">
+                <i class="fas fa-file-invoice-dollar mr-2"></i>Request Quote
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- Cumin Seeds -->
+<div class="zigzag-item">
+    <div class="row align-items-center">
+        <div class="col-lg-6">
+            <img src="img/CuminSeeds.jpg" class="img-fluid w-100 product-image" alt="Cumin Seeds">
+        </div>
+        <div class="col-lg-6 product-content">
+            <div class="product-badge">Spices</div>
+            <h2 class="mb-3">Cumin Seeds</h2>
+            <p class="product-intro">Aromatic cumin seeds with earthy, warm flavor, essential for tempering and seasoning in various cuisines worldwide.</p>
+            
+            <div class="product-description">
+                <h5 class="mb-3">Product Description</h5>
+                <p>Our cumin seeds are sourced from the best growing regions and are known for their strong, distinctive aroma and earthy flavor. These seeds are carefully cleaned and sorted to ensure premium quality with minimal broken pieces and foreign matter.</p>
+                
+                <p>Cumin seeds are a fundamental spice in Indian, Mexican, Middle Eastern, and North African cuisines. They are typically tempered in oil to release their flavor before being added to dishes, or ground into powder for spice blends and marinades.</p>
+            </div>
+            
+            <a href="contact.html" class="btn btn-primary btn-lg mt-3 py-2 px-4">
+                <i class="fas fa-file-invoice-dollar mr-2"></i>Request Quote
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- Moong Dal -->
+<div class="zigzag-item">
+    <div class="row align-items-center">
+        <div class="col-lg-6">
+            <img src="img/mongdal.jpg" class="img-fluid w-100 product-image" alt="Moong Dal">
+        </div>
+        <div class="col-lg-6 product-content">
+            <div class="product-badge">Pulses</div>
+            <h2 class="mb-3">Moong Dal (Split Green Gram)</h2>
+            <p class="product-intro">Light and easily digestible Moong Dal, perfect for healthy meals and traditional Indian preparations.</p>
+            
+            <div class="product-description">
+                <h5 class="mb-3">Product Description</h5>
+                <p>Moong Dal, made from split and skinned green gram, is one of the most easily digestible pulses. Our premium Moong Dal is carefully processed to ensure uniform yellow color and minimal broken pieces. It has a mild, sweet flavor and soft texture when cooked.</p>
+                
+                <p>Rich in protein, fiber, and essential nutrients, Moong Dal is particularly valued for its light and easy-to-digest nature. It's commonly used in Indian dal preparations, soups, khichdi, and various healthy dishes. It cooks quickly and is often recommended for children, elderly, and those with sensitive digestion.</p>
+            </div>
+            
+            <a href="contact.html" class="btn btn-primary btn-lg mt-3 py-2 px-4">
+                <i class="fas fa-file-invoice-dollar mr-2"></i>Request Quote
+            </a>
+        </div>
+    </div>
+</div>
+
+
+
+            
+
+            <!-- Other products follow the same structure -->
+            <!-- Basmati Rice, Chickpeas, Red Chili Powder, Sona Masoori Rice, Lentils -->
+            <!-- ... (other product sections remain the same) ... -->
+            
         </div>
     </div>
     <!-- Products Section End -->
-
 
 <!-- Footer Start -->
 <div class="container-fluid bg-dark text-white mt-5 py-5 px-sm-3 px-md-5">
@@ -534,8 +864,10 @@
 </div>
 <!-- Footer End -->
 
+
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
@@ -544,6 +876,10 @@
     <script src="lib/waypoints/waypoints.min.js"></script>
     <script src="lib/counterup/counterup.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Contact Javascript File -->
+    <script src="mail/jqBootstrapValidation.min.js"></script>
+    <script src="mail/contact.js"></script>
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>

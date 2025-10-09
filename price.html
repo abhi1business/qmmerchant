@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
-    <title>FASTER - Logistics Company Website Template</title>
+    <title>Payment Terms - QM Merchant International</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="Free HTML Templates" name="keywords">
-    <meta content="Free HTML Templates" name="description">
+    <meta content="Payment Terms, Loading Conditions, Delivery Conditions - QM Merchant International" name="keywords">
+    <meta content="Clear and transparent payment, loading, and delivery conditions for international exports. FOR, FOB, CIF, CNF terms available." name="description">
 
     <!-- Favicon -->
     <link href="img/favicon.ico" rel="icon">
@@ -23,216 +22,536 @@
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+    
+    <style>
+        /* Global Mobile Fixes */
+        body {
+            overflow-x: hidden;
+        }
+        
+        .container, .container-fluid {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+
+        /* Payment Terms Specific Styles */
+        .terms-hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('img/payment-terms-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        .terms-section {
+            padding: 5rem 0;
+        }
+
+        .condition-card {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            padding: 2.5rem;
+            margin-bottom: 3rem;
+            border-left: 5px solid #ff9d00;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .condition-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+
+        .condition-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #ff9d00, #ff9d00);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 8px 20px rgba(255, 157, 0, 0.3);
+        }
+
+        .condition-icon i {
+            font-size: 2rem;
+            color: white;
+        }
+
+        .condition-list {
+            list-style: none;
+            padding: 0;
+            margin: 1.5rem 0;
+        }
+
+        .condition-list li {
+            padding: 12px 0;
+            border-bottom: 1px solid #f0f0f0;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .condition-list li:last-child {
+            border-bottom: none;
+        }
+
+        .condition-list li i {
+            color: #ff9d00;
+            margin-right: 12px;
+            margin-top: 4px;
+            font-size: 1.1rem;
+        }
+
+        .term-badge {
+            display: inline-block;
+            background: #e7f3ff;
+            color: #ff9d00;
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-left: 8px;
+            border: 1px solid #b3d9ff;
+        }
+
+        /* Info Box Styles */
+        .info-box {
+            background: linear-gradient(135deg, #fff9f0, #fff3e0);
+            border: 2px solid #ffd8a6;
+            border-radius: 10px;
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+
+        .info-box h4 {
+            color: #ff9d00;
+            margin-bottom: 1rem;
+        }
+
+        /* Mobile Responsive Styles */
+        @media (max-width: 991.98px) {
+            .terms-section {
+                padding: 3rem 0;
+            }
+            
+            .condition-card {
+                padding: 2rem;
+                margin-bottom: 2rem;
+            }
+            
+            .condition-icon {
+                width: 70px;
+                height: 70px;
+            }
+            
+            .condition-icon i {
+                font-size: 1.8rem;
+            }
+            
+            .display-3 {
+                font-size: 2.5rem !important;
+            }
+        }
+        
+        @media (max-width: 767.98px) {
+            .terms-hero {
+                background-attachment: scroll;
+            }
+            
+            .condition-card {
+                padding: 1.5rem;
+            }
+            
+            .condition-list li {
+                padding: 10px 0;
+                font-size: 0.95rem;
+            }
+            
+            .info-box {
+                padding: 1.5rem;
+            }
+        }
+        
+        @media (max-width: 575.98px) {
+            .condition-card {
+                padding: 1.25rem;
+                margin-bottom: 1.5rem;
+            }
+            
+            .condition-icon {
+                width: 60px;
+                height: 60px;
+                margin-bottom: 1rem;
+            }
+            
+            .condition-icon i {
+                font-size: 1.5rem;
+            }
+            
+            .display-3 {
+                font-size: 2rem !important;
+            }
+            
+            .condition-list li {
+                font-size: 0.9rem;
+            }
+            
+            .term-badge {
+                font-size: 0.75rem;
+                padding: 3px 10px;
+            }
+        }
+
+        /* Header Mobile Styles */
+        @media (max-width: 991.98px) {
+            .navbar-brand {
+                margin-left: 0 !important;
+                padding: 5px 0;
+            }
+            
+            .navbar-brand img {
+                height: 50px !important;
+                width: 120px !important;
+            }
+            
+            .navbar-collapse {
+                background: white;
+                border-top: 1px solid #dee2e6;
+                margin-top: 10px;
+                padding: 15px;
+                box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            }
+            
+            .nav-item {
+                border-bottom: 1px solid #f8f9fa;
+            }
+            
+            .nav-item:last-child {
+                border-bottom: none;
+            }
+            
+            .nav-link {
+                padding: 12px 15px !important;
+                font-weight: 500;
+            }
+            
+            .mobile-quote-btn {
+                display: block !important;
+                margin: 15px 0 5px;
+                text-align: center;
+            }
+            
+            .mobile-contact-icons {
+                display: flex !important;
+                align-items: center;
+                gap: 15px;
+                margin-right: 15px;
+            }
+        }
+        
+        @media (max-width: 575.98px) {
+            .topbar-small {
+                font-size: 0.75rem;
+                text-align: left !important;
+            }
+            
+            .topbar-small .d-inline-flex {
+                justify-content: flex-start !important;
+            }
+            
+            .topbar-small .px-3 {
+                display: inline !important;
+            }
+            
+            .navbar-toggler-container {
+                display: flex;
+                align-items: center;
+                gap: 15px;
+            }
+        }
+        
+        @media (min-width: 992px) {
+            .mobile-quote-btn,
+            .mobile-contact-icons {
+                display: none !important;
+            }
+            
+            .topbar-content {
+                text-align: left !important;
+            }
+        }
+        
+        .topbar-content {
+            text-align: left;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        .mobile-contact-icons a {
+            color: #eb9029 !important;
+            font-size: 1.1rem;
+            transition: color 0.3s ease;
+        }
+        
+        .mobile-contact-icons a:hover {
+            color: #ffae00 !important;
+        }
+
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            display: none;
+            right: 30px;
+            bottom: 30px;
+            z-index: 99;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #f78d14, #f78d14);
+            color: white;
+            border: none;
+            box-shadow: 0 4px 15px rgba(247, 141, 20, 0.4);
+            transition: all 0.3s ease;
+        }
+
+        .back-to-top:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(247, 141, 20, 0.6);
+        }
+    </style>
 </head>
 
 <body>
     <!-- Topbar Start -->
     <div class="container-fluid bg-dark">
         <div class="row py-2 px-lg-5">
-            <div class="col-lg-6 text-center text-lg-left mb-2 mb-lg-0">
+            <div class="col-lg-6 text-left text-lg-left mb-2 mb-lg-0 topbar-small topbar-content">
                 <div class="d-inline-flex align-items-center text-white">
-                    <small><i class="fa fa-phone-alt mr-2"></i>+012 345 6789</small>
+                    <small><i class="fa fa-phone-alt mr-2"></i>+91 7218337339 | +91 79993 19196</small>
                     <small class="px-3">|</small>
-                    <small><i class="fa fa-envelope mr-2"></i>info@example.com</small>
-                </div>
-            </div>
-            <div class="col-lg-6 text-center text-lg-right">
-                <div class="d-inline-flex align-items-center">
-                    <a class="text-white px-2" href="">
-                        <i class="fab fa-facebook-f"></i>
-                    </a>
-                    <a class="text-white px-2" href="">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                    <a class="text-white px-2" href="">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
-                    <a class="text-white px-2" href="">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a class="text-white pl-2" href="">
-                        <i class="fab fa-youtube"></i>
-                    </a>
+                    <small><i class="fa fa-envelope mr-2"></i>sales@qmmerchant.com</small>
                 </div>
             </div>
         </div>
     </div>
     <!-- Topbar End -->
 
-
     <!-- Navbar Start -->
-    <div class="container-fluid p-0">
-        <nav class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-lg-5">
+    <div class="container-fluid p-0 sticky-top" style="background: white;">
+        <nav class="navbar navbar-expand-lg bg-light navbar-light py-2 py-lg-1 px-lg-5">
             <a href="index.html" class="navbar-brand ml-lg-3">
-                <h1 class="m-0 display-5 text-uppercase text-primary"><i class="fa fa-truck mr-2"></i>Faster</h1>
+                <img src="img/logo.png" alt="QM Merchant International Logo" class="img-fluid" style="height: 65px; width: 140px;">
             </a>
-            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+            
+            <!-- Mobile Contact Icons -->
+            <div class="navbar-toggler-container d-lg-none">
+                <div class="mobile-contact-icons">
+                    <a href="tel:+917999319196" class="text-primary" title="Call Us">
+                        <i class="fa fa-phone-alt"></i>
+                    </a>
+                    <a href="mailto:sales@qmmerchant.com" class="text-primary" title="Email Us">
+                        <i class="fa fa-envelope"></i>
+                    </a>
+                </div>
+                
+                <button type="button" class="navbar-toggler border-0" data-toggle="collapse" data-target="#navbarCollapse" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+            
             <div class="collapse navbar-collapse justify-content-between px-lg-3" id="navbarCollapse">
                 <div class="navbar-nav m-auto py-0">
                     <a href="index.html" class="nav-item nav-link">Home</a>
-                    <a href="about.html" class="nav-item nav-link">About</a>
-                    <a href="service.html" class="nav-item nav-link">Service</a>
-                    <a href="price.html" class="nav-item nav-link active">Price</a>
-                    <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
-                        <div class="dropdown-menu rounded-0 m-0">
-                            <a href="blog.html" class="dropdown-item">Blog Grid</a>
-                            <a href="single.html" class="dropdown-item">Blog Detail</a>
-                        </div>
-                    </div>
+                    <a href="about.html" class="nav-item nav-link">About US</a>
+                    <a href="products.html" class="nav-item nav-link">Products</a>
+                    <a href="price.html" class="nav-item nav-link active">Payment Terms</a>
+                    <a href="blog.html" class="nav-item nav-link">Blog Grid</a>
                     <a href="contact.html" class="nav-item nav-link">Contact</a>
+                    
+                    <div class="d-lg-none mobile-quote-btn">
+                        <a href="index.html#quoteSection" class="btn btn-primary btn-block py-2">Get A Quote</a>
+                    </div>
                 </div>
-                <a href="" class="btn btn-primary py-2 px-4 d-none d-lg-block">Get A Quote</a>
+                
+                <a href="index.html#quoteSection" class="btn btn-primary py-2 px-4 d-none d-lg-block">Get A Quote</a>
             </div>
         </nav>
     </div>
     <!-- Navbar End -->
 
-
+    
     <!-- Header Start -->
     <div class="jumbotron jumbotron-fluid mb-5">
         <div class="container text-center py-5">
-            <h1 class="text-white display-3">Price</h1>
+            <h1 class="text-white display-3">Payment Terms</h1>
             <div class="d-inline-flex align-items-center text-white">
-                <p class="m-0"><a class="text-white" href="">Home</a></p>
+                <p class="m-0"><a class="text-white" href="index.html">Home</a></p>
                 <i class="fa fa-circle px-3"></i>
-                <p class="m-0">Price</p>
+                <p class="m-0">Payment Terms</p>
             </div>
         </div>
     </div>
     <!-- Header End -->
 
-
-    <!-- Pricing Plan Start -->
-    <div class="container-fluid pt-5">
+    <!-- Payment Terms Section Start -->
+    <div class="container-fluid terms-section">
         <div class="container">
-            <div class="text-center pb-2">
-                <h6 class="text-primary text-uppercase font-weight-bold">Pricing Plan</h6>
-                <h1 class="mb-4">Affordable Pricing Packages</h1>
+            <!-- Info Box -->
+            <div class="info-box">
+                <h4><i class="fas fa-info-circle mr-2"></i>Important Information</h4>
+                <p class="mb-0">All our payment, loading, and delivery conditions are designed to ensure smooth international trade operations. We offer flexible terms to accommodate various business requirements while maintaining security and transparency in all transactions.</p>
             </div>
-            <div class="row">
-                <div class="col-md-4 mb-5">
-                    <div class="bg-secondary">
-                        <div class="text-center p-4">
-                            <h1 class="display-4 mb-0">
-                                <small class="align-top text-muted font-weight-medium" style="font-size: 22px; line-height: 45px;">$</small>49<small class="align-bottom text-muted font-weight-medium" style="font-size: 16px; line-height: 40px;">/Mo</small>
-                            </h1>
+
+            <!-- Payment Conditions -->
+            <div class="condition-card">
+                <div class="condition-icon">
+                    <i class="fas fa-money-bill-wave"></i>
+                </div>
+                <h2 class="mb-4">Payment Conditions</h2>
+                <p class="text-muted mb-4">We offer multiple secure payment options to facilitate international trade with flexibility and security.</p>
+                
+                <ul class="condition-list">
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <strong>80% Advance & balance on loading</strong>
+                            <span class="term-badge">FOR</span>
+                            <p class="text-muted mb-0 small">80% payment in advance, remaining 20% upon loading of goods</p>
                         </div>
-                        <div class="bg-primary text-center p-4">
-                            <h3 class="m-0">Basic</h3>
+                    </li>
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <strong>80% Advance & balance on delivery at Port</strong>
+                            <span class="term-badge">FOB</span>
+                            <p class="text-muted mb-0 small">80% advance payment, balance upon delivery at port of shipment</p>
                         </div>
-                        <div class="d-flex flex-column align-items-center py-4">
-                            <p>HTML5 & CSS3</p>
-                            <p>Bootstrap 4</p>
-                            <p>Responsive Layout</p>
-                            <p>Compatible With All Browsers</p>
-                            <a href="" class="btn btn-primary py-2 px-4 my-2">Order Now</a>
+                    </li>
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <strong>80% Advance & balance against scan copy of BL and documents</strong>
+                            <span class="term-badge">CIF/CNF</span>
+                            <p class="text-muted mb-0 small">Balance payment against scanned Bill of Lading and shipping documents</p>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <strong>100% at sight LC from prime international bank</strong>
+                            <span class="term-badge">CIF/CNF</span>
+                            <p class="text-muted mb-0 small">Full payment through Letter of Credit from reputable international banks</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Loading Conditions -->
+            <div class="condition-card">
+                <div class="condition-icon">
+                    <i class="fas fa-truck-loading"></i>
+                </div>
+                <h2 class="mb-4">Loading Conditions</h2>
+                <p class="text-muted mb-4">Efficient and secure loading processes to ensure your goods are handled with care and precision.</p>
+                
+                <ul class="condition-list">
+                    <li>
+                        <i class="fas fa-shipping-fast"></i>
+                        <div>
+                            <strong>Truckload</strong>
+                            <p class="text-muted mb-0">Full truckload shipments for bulk orders with optimized logistics</p>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fas fa-container-storage"></i>
+                        <div>
+                            <strong>Container (Factory Stuffing)</strong>
+                            <p class="text-muted mb-0">Direct container stuffing at factory premises for maximum security and efficiency</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Delivery Conditions -->
+            <div class="condition-card">
+                <div class="condition-icon">
+                    <i class="fas fa-shipping-fast"></i>
+                </div>
+                <h2 class="mb-4">Delivery Conditions</h2>
+                <p class="text-muted mb-4">Comprehensive delivery options tailored to meet your specific logistical requirements.</p>
+                
+                <ul class="condition-list">
+                    <li>
+                        <i class="fas fa-warehouse"></i>
+                        <div>
+                            <strong>FOR (Free on Rail)</strong>
+                            <p class="text-muted mb-0">Delivery to specified railway station, all charges paid by seller until rail point</p>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fas fa-anchor"></i>
+                        <div>
+                            <strong>FOB (Free on Board)</strong>
+                            <p class="text-muted mb-0">Goods delivered on board the vessel at port of shipment, all charges until loading</p>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fas fa-ship"></i>
+                        <div>
+                            <strong>CIF (Cost, Insurance & Freight)</strong>
+                            <p class="text-muted mb-0">Includes cost of goods, marine insurance, and freight to destination port</p>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fas fa-globe-asia"></i>
+                        <div>
+                            <strong>CNF (Cost & Freight)</strong>
+                            <p class="text-muted mb-0">Includes cost of goods and freight to destination port (insurance excluded)</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Additional Information -->
+            <div class="info-box">
+                <h4><i class="fas fa-handshake mr-2"></i>Why Choose Our Terms?</h4>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="fas fa-shield-alt text-primary mr-3"></i>
+                            <span>Secure & Transparent Transactions</span>
+                        </div>
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="fas fa-clock text-primary mr-3"></i>
+                            <span>Quick Processing & Documentation</span>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="fas fa-globe text-primary mr-3"></i>
+                            <span>International Standards Compliance</span>
+                        </div>
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="fas fa-headset text-primary mr-3"></i>
+                            <span>24/7 Customer Support</span>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 mb-5">
-                    <div class="bg-secondary">
-                        <div class="text-center p-4">
-                            <h1 class="display-4 mb-0">
-                                <small class="align-top text-muted font-weight-medium" style="font-size: 22px; line-height: 45px;">$</small>99<small class="align-bottom text-muted font-weight-medium" style="font-size: 16px; line-height: 40px;">/Mo</small>
-                            </h1>
-                        </div>
-                        <div class="bg-primary text-center p-4">
-                            <h3 class="m-0">Premium</h3>
-                        </div>
-                        <div class="d-flex flex-column align-items-center py-4">
-                            <p>HTML5 & CSS3</p>
-                            <p>Bootstrap 4</p>
-                            <p>Responsive Layout</p>
-                            <p>Compatible With All Browsers</p>
-                            <a href="" class="btn btn-primary py-2 px-4 my-2">Order Now</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-5">
-                    <div class="bg-secondary">
-                        <div class="text-center p-4">
-                            <h1 class="display-4 mb-0">
-                                <small class="align-top text-muted font-weight-medium" style="font-size: 22px; line-height: 45px;">$</small>149<small class="align-bottom text-muted font-weight-medium" style="font-size: 16px; line-height: 40px;">/Mo</small>
-                            </h1>
-                        </div>
-                        <div class="bg-primary text-center p-4">
-                            <h3 class="m-0">Business</h3>
-                        </div>
-                        <div class="d-flex flex-column align-items-center py-4">
-                            <p>HTML5 & CSS3</p>
-                            <p>Bootstrap 4</p>
-                            <p>Responsive Layout</p>
-                            <p>Compatible With All Browsers</p>
-                            <a href="" class="btn btn-primary py-2 px-4 my-2">Order Now</a>
-                        </div>
-                    </div>
-                </div>
+            </div>
+
+            <!-- CTA Section -->
+            <div class="text-center mt-5">
+                <h3 class="mb-4">Ready to Start Your Export Order?</h3>
+                <p class="mb-4">Contact our team to discuss the best payment and delivery terms for your specific requirements.</p>
+                <a href="contact.html" class="btn btn-primary btn-lg py-3 px-5">
+                    <i class="fas fa-envelope mr-2"></i>Contact Us Today
+                </a>
             </div>
         </div>
     </div>
-    <!-- Pricing Plan End -->
-
-
-    <!-- Testimonial Start -->
-    <div class="container-fluid py-5">
-        <div class="container">
-            <div class="text-center pb-2">
-                <h6 class="text-primary text-uppercase font-weight-bold">Testimonial</h6>
-                <h1 class="mb-4">Our Clients Say</h1>
-            </div>
-            <div class="owl-carousel testimonial-carousel">
-                <div class="position-relative bg-secondary p-4">
-                    <i class="fa fa-3x fa-quote-right text-primary position-absolute" style="top: -6px; right: 0;"></i>
-                    <div class="d-flex align-items-center mb-3">
-                        <img class="img-fluid rounded-circle" src="img/testimonial-1.jpg" style="width: 60px; height: 60px;" alt="">
-                        <div class="ml-3">
-                            <h6 class="font-weight-semi-bold m-0">Client Name</h6>
-                            <small>- Profession</small>
-                        </div>
-                    </div>
-                    <p class="m-0">Sed ea amet kasd elitr stet, stet rebum et ipsum est duo elitr clita lorem. Dolor ipsum sanct clita</p>
-                </div>
-                <div class="position-relative bg-secondary p-4">
-                    <i class="fa fa-3x fa-quote-right text-primary position-absolute" style="top: -6px; right: 0;"></i>
-                    <div class="d-flex align-items-center mb-3">
-                        <img class="img-fluid rounded-circle" src="img/testimonial-2.jpg" style="width: 60px; height: 60px;" alt="">
-                        <div class="ml-3">
-                            <h6 class="font-weight-semi-bold m-0">Client Name</h6>
-                            <small>- Profession</small>
-                        </div>
-                    </div>
-                    <p class="m-0">Sed ea amet kasd elitr stet, stet rebum et ipsum est duo elitr clita lorem. Dolor ipsum sanct clita</p>
-                </div>
-                <div class="position-relative bg-secondary p-4">
-                    <i class="fa fa-3x fa-quote-right text-primary position-absolute" style="top: -6px; right: 0;"></i>
-                    <div class="d-flex align-items-center mb-3">
-                        <img class="img-fluid rounded-circle" src="img/testimonial-3.jpg" style="width: 60px; height: 60px;" alt="">
-                        <div class="ml-3">
-                            <h6 class="font-weight-semi-bold m-0">Client Name</h6>
-                            <small>- Profession</small>
-                        </div>
-                    </div>
-                    <p class="m-0">Sed ea amet kasd elitr stet, stet rebum et ipsum est duo elitr clita lorem. Dolor ipsum sanct clita</p>
-                </div>
-                <div class="position-relative bg-secondary p-4">
-                    <i class="fa fa-3x fa-quote-right text-primary position-absolute" style="top: -6px; right: 0;"></i>
-                    <div class="d-flex align-items-center mb-3">
-                        <img class="img-fluid rounded-circle" src="img/testimonial-4.jpg" style="width: 60px; height: 60px;" alt="">
-                        <div class="ml-3">
-                            <h6 class="font-weight-semi-bold m-0">Client Name</h6>
-                            <small>- Profession</small>
-                        </div>
-                    </div>
-                    <p class="m-0">Sed ea amet kasd elitr stet, stet rebum et ipsum est duo elitr clita lorem. Dolor ipsum sanct clita</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Testimonial End -->
-
+    <!-- Payment Terms Section End -->
 
     <!-- Footer Start -->
     <div class="container-fluid bg-dark text-white mt-5 py-5 px-sm-3 px-md-5">
@@ -241,9 +560,11 @@
                 <div class="row">
                     <div class="col-md-6 mb-5">
                         <h3 class="text-primary mb-4">Get In Touch</h3>
-                        <p><i class="fa fa-map-marker-alt mr-2"></i>123 Street, New York, USA</p>
-                        <p><i class="fa fa-phone-alt mr-2"></i>+012 345 67890</p>
-                        <p><i class="fa fa-envelope mr-2"></i>info@example.com</p>
+                        <p><i class="fa fa-map-marker-alt mr-2"></i>Iqra Compound Adhartala, Jabalpur, India</p>
+                        <p><i class="fa fa-phone-alt mr-2"></i>+91 79993 19196</p>
+                        <p><i class="fa fa-phone-alt mr-2"></i>+91 72183 37339</p>
+                        <p><i class="fa fa-envelope mr-2"></i>sales@qmmerchant.com</p>
+                        <p><i class="fa fa-envelope mr-2"></i>exports@qmmerchant.com</p>
                         <div class="d-flex justify-content-start mt-4">
                             <a class="btn btn-outline-light btn-social mr-2" href="#"><i class="fab fa-twitter"></i></a>
                             <a class="btn btn-outline-light btn-social mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
@@ -254,62 +575,54 @@
                     <div class="col-md-6 mb-5">
                         <h3 class="text-primary mb-4">Quick Links</h3>
                         <div class="d-flex flex-column justify-content-start">
-                            <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Home</a>
-                            <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>About Us</a>
-                            <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Our Services</a>
-                            <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Pricing Plan</a>
-                            <a class="text-white" href="#"><i class="fa fa-angle-right mr-2"></i>Contact Us</a>
+                            <a class="text-white mb-2" href="index.html"><i class="fa fa-angle-right mr-2"></i>Home</a>
+                            <a class="text-white mb-2" href="about.html"><i class="fa fa-angle-right mr-2"></i>About Us</a>
+                            <a class="text-white mb-2" href="products.html"><i class="fa fa-angle-right mr-2"></i>Products</a>
+                            <a class="text-white mb-2" href="price.html"><i class="fa fa-angle-right mr-2"></i>Payment Terms</a>
+                            <a class="text-white" href="contact.html"><i class="fa fa-angle-right mr-2"></i>Contact Us</a>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="col-lg-5 col-md-6 mb-5">
-                <h3 class="text-primary mb-4">Newsletter</h3>
-                <p>Rebum labore lorem dolores kasd est, et ipsum amet et at kasd, ipsum sea tempor magna tempor. Accu kasd sed ea duo ipsum. Dolor duo eirmod sea justo no lorem est diam</p>
-                <div class="w-100">
-                    <div class="input-group">
-                        <input type="text" class="form-control border-light" style="padding: 30px;" placeholder="Your Email Address">
-                        <div class="input-group-append">
-                            <button class="btn btn-primary px-4">Sign Up</button>
-                        </div>
+                <h3 class="text-primary mb-4">About QM Merchant International</h3>
+                <p>QM Merchant International Pvt. Ltd. is a leading exporter of premium quality spices, rice, and pulses from India. With years of experience in international trade, we ensure smooth transactions with clear and transparent payment terms.</p>
+                
+                <div class="d-flex mb-3">
+                    <div class="mr-3">
+                        <i class="fas fa-pepper-hot text-primary"></i>
+                        <span class="text-white ml-2">Spices</span>
+                    </div>
+                    <div class="mr-3">
+                        <i class="fas fa-wheat-alt text-primary"></i>
+                        <span class="text-white ml-2">Rice</span>
+                    </div>
+                    <div>
+                        <i class="fas fa-seedling text-primary"></i>
+                        <span class="text-white ml-2">Pulses</span>
                     </div>
                 </div>
+                
+                <h5 class="text-primary mb-3">Business Hours</h5>
+                <p class="mb-1">Monday - Friday: 9:00 AM - 6:00 PM</p>
+                <p class="mb-1">Saturday: 9:00 AM - 2:00 PM</p>
+                <p>Sunday: Closed</p>
             </div>
         </div>
     </div>
+
     <div class="container-fluid bg-dark text-white border-top py-4 px-sm-3 px-md-5" style="border-color: #3E3E4E !important;">
         <div class="row">
             <div class="col-lg-6 text-center text-md-left mb-3 mb-md-0">
-                <p class="m-0 text-white">&copy; <a href="#">Your Site Name</a>. All Rights Reserved. 
-				
-				<!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-				Designed by <a href="https://htmlcodex.com">HTML Codex</a>
-                </p>
-            </div>
-            <div class="col-lg-6 text-center text-md-right">
-                <ul class="nav d-inline-flex">
-                    <li class="nav-item">
-                        <a class="nav-link text-white py-0" href="#">Privacy</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white py-0" href="#">Terms</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white py-0" href="#">FAQs</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white py-0" href="#">Help</a>
-                    </li>
-                </ul>
+                <p class="m-0 text-white">&copy; <a href="#" class="text-primary">QM Merchant International Pvt. Ltd.</a>. All Rights Reserved. 
+                Established 2025</p>
             </div>
         </div>
     </div>
     <!-- Footer End -->
 
-
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary back-to-top"><i class="fa fa-angle-double-up"></i></a>
-
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
@@ -319,12 +632,25 @@
     <script src="lib/counterup/counterup.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
 
-    <!-- Contact Javascript File -->
-    <script src="mail/jqBootstrapValidation.min.js"></script>
-    <script src="mail/contact.js"></script>
-
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
-</body>
 
+    <script>
+        // Back to top button functionality
+        $(document).ready(function(){
+            $(window).scroll(function(){
+                if ($(this).scrollTop() > 300) {
+                    $('.back-to-top').fadeIn('slow');
+                } else {
+                    $('.back-to-top').fadeOut('slow');
+                }
+            });
+            
+            $('.back-to-top').click(function(){
+                $('html, body').animate({scrollTop : 0}, 800);
+                return false;
+            });
+        });
+    </script>
+</body>
 </html>

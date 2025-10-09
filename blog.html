@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
-    <title>FASTER - Logistics Company Website Template</title>
+    <title>Agriculture Blog - QM Merchant International</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="Free HTML Templates" name="keywords">
-    <meta content="Free HTML Templates" name="description">
+    <meta content="Agriculture Blog, Spices Export, Rice Quality, Farming - QM Merchant International" name="keywords">
+    <meta content="Latest insights on agriculture exports, spices quality, rice cultivation, and international trade from QM Merchant International experts." name="description">
 
     <!-- Favicon -->
     <link href="img/favicon.ico" rel="icon">
@@ -23,319 +22,1512 @@
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+    
+    <style>
+        /* Blog Page Specific Styles */
+        .blog-hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('img/blog-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        .blog-section {
+            padding: 5rem 0;
+        }
+
+        .blog-card {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            margin-bottom: 3rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            overflow: hidden;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+
+        .blog-image {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .blog-image img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .blog-card:hover .blog-image img {
+            transform: scale(1.05);
+        }
+
+        .blog-date {
+            position: absolute;
+            bottom: -30px;
+            right: 30px;
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #ff9d00, #ff9d00);
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            box-shadow: 0 5px 15px rgba(255, 157, 0, 0.3);
+        }
+
+        .blog-date h4 {
+            font-weight: bold;
+            margin-bottom: 0;
+            line-height: 1;
+        }
+
+        .blog-date small {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+        }
+
+        .blog-content {
+            padding: 2.5rem;
+        }
+
+        .blog-meta {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .blog-author, .blog-category {
+            display: flex;
+            align-items: center;
+            color: #6c757d;
+            font-size: 0.9rem;
+        }
+
+        .blog-author i, .blog-category i {
+            color: #ff9d00;
+            margin-right: 8px;
+        }
+
+        .blog-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            line-height: 1.4;
+        }
+
+        .blog-excerpt {
+            color: #6c757d;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .read-more {
+            color: #ff9d00;
+            font-weight: 600;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .read-more:hover {
+            color: #e67e00;
+            padding-left: 5px;
+        }
+
+        /* Sidebar Styles */
+        .sidebar-widget {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .widget-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            color: #333;
+            border-bottom: 3px solid #ff9d00;
+            padding-bottom: 0.5rem;
+        }
+
+        .search-form {
+            position: relative;
+        }
+
+        .search-form input {
+            border: 2px solid #e9ecef;
+            border-radius: 8px;
+            padding: 12px 20px;
+            width: 100%;
+            transition: all 0.3s ease;
+        }
+
+        .search-form input:focus {
+            border-color: #ff9d00;
+            box-shadow: 0 0 0 0.2rem rgba(255, 157, 0, 0.25);
+        }
+
+        .search-form button {
+            position: absolute;
+            right: 5px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: #ff9d00;
+            border: none;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+        }
+
+        .search-form button:hover {
+            background: #e67e00;
+        }
+
+        .category-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .category-item {
+            padding: 12px 0;
+            border-bottom: 1px solid #f0f0f0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+
+        .category-item:last-child {
+            border-bottom: none;
+        }
+
+        .category-item:hover {
+            background: #fff9f0;
+            padding-left: 10px;
+        }
+
+        .category-link {
+            color: #333;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            transition: color 0.3s ease;
+        }
+
+        .category-link:hover {
+            color: #ff9d00;
+        }
+
+        .category-link i {
+            margin-right: 10px;
+            color: #ff9d00;
+        }
+
+        .category-count {
+            background: #ff9d00;
+            color: white;
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .recent-post {
+            display: flex;
+            margin-bottom: 1rem;
+            padding: 1rem;
+            background: #f8f9fa;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .recent-post:hover {
+            background: #fff9f0;
+            transform: translateX(5px);
+        }
+
+        .recent-post-img {
+            width: 80px;
+            height: 80px;
+            border-radius: 8px;
+            object-fit: cover;
+            margin-right: 1rem;
+        }
+
+        .recent-post-content {
+            flex: 1;
+        }
+
+        .recent-post-title {
+            font-size: 0.95rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            line-height: 1.4;
+        }
+
+        .recent-post-title a {
+            color: #333;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .recent-post-title a:hover {
+            color: #ff9d00;
+        }
+
+        .recent-post-date {
+            font-size: 0.8rem;
+            color: #6c757d;
+        }
+
+        .tag-cloud {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .tag {
+            background: #f8f9fa;
+            color: #333;
+            padding: 8px 15px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-size: 0.85rem;
+            transition: all 0.3s ease;
+            border: 1px solid #e9ecef;
+        }
+
+        .tag:hover {
+            background: #ff9d00;
+            color: white;
+            border-color: #ff9d00;
+        }
+
+        /* Pagination */
+        .pagination {
+            margin-top: 3rem;
+        }
+
+        .page-link {
+            color: #333;
+            border: 1px solid #e9ecef;
+            padding: 12px 20px;
+            margin: 0 5px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .page-link:hover {
+            background: #ff9d00;
+            color: white;
+            border-color: #ff9d00;
+        }
+
+        .page-item.active .page-link {
+            background: #ff9d00;
+            border-color: #ff9d00;
+            color: white;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 991.98px) {
+            .blog-section {
+                padding: 3rem 0;
+            }
+            
+            .blog-content {
+                padding: 2rem;
+            }
+            
+            .blog-image img {
+                height: 250px;
+            }
+            
+            .blog-date {
+                width: 70px;
+                height: 70px;
+                bottom: -25px;
+                right: 25px;
+            }
+            
+            .blog-date h4 {
+                font-size: 1.1rem;
+            }
+            
+            .blog-title {
+                font-size: 1.3rem;
+            }
+        }
+        
+        @media (max-width: 767.98px) {
+            .blog-hero {
+                background-attachment: scroll;
+            }
+            
+            .blog-content {
+                padding: 1.5rem;
+            }
+            
+            .blog-image img {
+                height: 200px;
+            }
+            
+            .blog-meta {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.5rem;
+            }
+            
+            .sidebar-widget {
+                padding: 1.5rem;
+            }
+        }
+        
+        @media (max-width: 575.98px) {
+            .blog-content {
+                padding: 1.25rem;
+            }
+            
+            .blog-image img {
+                height: 180px;
+            }
+            
+            .blog-date {
+                width: 60px;
+                height: 60px;
+                bottom: -20px;
+                right: 20px;
+            }
+            
+            .blog-date h4 {
+                font-size: 1rem;
+            }
+            
+            .blog-date small {
+                font-size: 0.7rem;
+            }
+            
+            .blog-title {
+                font-size: 1.2rem;
+            }
+        }
+
+        /* Header Mobile Styles */
+        @media (max-width: 991.98px) {
+            .navbar-brand {
+                margin-left: 0 !important;
+                padding: 5px 0;
+            }
+            
+            .navbar-brand img {
+                height: 50px !important;
+                width: 120px !important;
+            }
+            
+            .navbar-collapse {
+                background: white;
+                border-top: 1px solid #dee2e6;
+                margin-top: 10px;
+                padding: 15px;
+                box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            }
+            
+            .nav-item {
+                border-bottom: 1px solid #f8f9fa;
+            }
+            
+            .nav-item:last-child {
+                border-bottom: none;
+            }
+            
+            .nav-link {
+                padding: 12px 15px !important;
+                font-weight: 500;
+            }
+            
+            .mobile-quote-btn {
+                display: block !important;
+                margin: 15px 0 5px;
+                text-align: center;
+            }
+            
+            .mobile-contact-icons {
+                display: flex !important;
+                align-items: center;
+                gap: 15px;
+                margin-right: 15px;
+            }
+        }
+        
+        @media (max-width: 575.98px) {
+            .topbar-small {
+                font-size: 0.75rem;
+                text-align: left !important;
+            }
+            
+            .topbar-small .d-inline-flex {
+                justify-content: flex-start !important;
+            }
+            
+            .topbar-small .px-3 {
+                display: inline !important;
+            }
+            
+            .navbar-toggler-container {
+                display: flex;
+                align-items: center;
+                gap: 15px;
+            }
+        }
+        
+        @media (min-width: 992px) {
+            .mobile-quote-btn,
+            .mobile-contact-icons {
+                display: none !important;
+            }
+            
+            .topbar-content {
+                text-align: left !important;
+            }
+        }
+        
+        .topbar-content {
+            text-align: left;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        .mobile-contact-icons a {
+            color: #eb9029 !important;
+            font-size: 1.1rem;
+            transition: color 0.3s ease;
+        }
+        
+        .mobile-contact-icons a:hover {
+            color: #ffae00 !important;
+        }
+
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            display: none;
+            right: 30px;
+            bottom: 30px;
+            z-index: 99;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #f78d14, #f78d14);
+            color: white;
+            border: none;
+            box-shadow: 0 4px 15px rgba(247, 141, 20, 0.4);
+            transition: all 0.3s ease;
+        }
+
+        .back-to-top:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(247, 141, 20, 0.6);
+        }
+    </style>
 </head>
 
 <body>
     <!-- Topbar Start -->
     <div class="container-fluid bg-dark">
         <div class="row py-2 px-lg-5">
-            <div class="col-lg-6 text-center text-lg-left mb-2 mb-lg-0">
+            <div class="col-lg-6 text-left text-lg-left mb-2 mb-lg-0 topbar-small topbar-content">
                 <div class="d-inline-flex align-items-center text-white">
-                    <small><i class="fa fa-phone-alt mr-2"></i>+012 345 6789</small>
+                    <small><i class="fa fa-phone-alt mr-2"></i>+91 7218337339 | +91 79993 19196</small>
                     <small class="px-3">|</small>
-                    <small><i class="fa fa-envelope mr-2"></i>info@example.com</small>
-                </div>
-            </div>
-            <div class="col-lg-6 text-center text-lg-right">
-                <div class="d-inline-flex align-items-center">
-                    <a class="text-white px-2" href="">
-                        <i class="fab fa-facebook-f"></i>
-                    </a>
-                    <a class="text-white px-2" href="">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                    <a class="text-white px-2" href="">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
-                    <a class="text-white px-2" href="">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a class="text-white pl-2" href="">
-                        <i class="fab fa-youtube"></i>
-                    </a>
+                    <small><i class="fa fa-envelope mr-2"></i>sales@qmmerchant.com</small>
                 </div>
             </div>
         </div>
     </div>
     <!-- Topbar End -->
 
-
     <!-- Navbar Start -->
-    <div class="container-fluid p-0">
-        <nav class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-lg-5">
+    <div class="container-fluid p-0 sticky-top" style="background: white;">
+        <nav class="navbar navbar-expand-lg bg-light navbar-light py-2 py-lg-1 px-lg-5">
             <a href="index.html" class="navbar-brand ml-lg-3">
-                <h1 class="m-0 display-5 text-uppercase text-primary"><i class="fa fa-truck mr-2"></i>Faster</h1>
+                <img src="img/logo.png" alt="QM Merchant International Logo" class="img-fluid" style="height: 65px; width: 140px;">
             </a>
-            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+            
+            <!-- Mobile Contact Icons -->
+            <div class="navbar-toggler-container d-lg-none">
+                <div class="mobile-contact-icons">
+                    <a href="tel:+917999319196" class="text-primary" title="Call Us">
+                        <i class="fa fa-phone-alt"></i>
+                    </a>
+                    <a href="mailto:sales@qmmerchant.com" class="text-primary" title="Email Us">
+                        <i class="fa fa-envelope"></i>
+                    </a>
+                </div>
+                
+                <button type="button" class="navbar-toggler border-0" data-toggle="collapse" data-target="#navbarCollapse" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+            
             <div class="collapse navbar-collapse justify-content-between px-lg-3" id="navbarCollapse">
                 <div class="navbar-nav m-auto py-0">
                     <a href="index.html" class="nav-item nav-link">Home</a>
-                    <a href="about.html" class="nav-item nav-link">About</a>
-                    <a href="service.html" class="nav-item nav-link">Service</a>
-                    <a href="price.html" class="nav-item nav-link">Price</a>
-                    <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle active" data-toggle="dropdown">Pages</a>
-                        <div class="dropdown-menu rounded-0 m-0">
-                            <a href="blog.html" class="dropdown-item active">Blog Grid</a>
-                            <a href="single.html" class="dropdown-item">Blog Detail</a>
-                        </div>
-                    </div>
+                    <a href="about.html" class="nav-item nav-link">About US</a>
+                    <a href="products.html" class="nav-item nav-link">Products</a>
+                    <a href="price.html" class="nav-item nav-link">Payment Terms</a>
+                    <a href="blog.html" class="nav-item nav-link active">Blog Grid</a>
                     <a href="contact.html" class="nav-item nav-link">Contact</a>
+                    
+                    <div class="d-lg-none mobile-quote-btn">
+                        <a href="index.html#quoteSection" class="btn btn-primary btn-block py-2">Get A Quote</a>
+                    </div>
                 </div>
-                <a href="" class="btn btn-primary py-2 px-4 d-none d-lg-block">Get A Quote</a>
+                
+                <a href="index.html#quoteSection" class="btn btn-primary py-2 px-4 d-none d-lg-block">Get A Quote</a>
             </div>
         </nav>
     </div>
     <!-- Navbar End -->
 
-
     <!-- Header Start -->
-    <div class="jumbotron jumbotron-fluid mb-5">
+
+
+
+    <div class="jumbotron jumbotron-fluid mb-5 blog-hero">
         <div class="container text-center py-5">
-            <h1 class="text-white display-3">Latest Blog</h1>
+            <h1 class="text-white display-3">Agriculture Blog</h1>
             <div class="d-inline-flex align-items-center text-white">
-                <p class="m-0"><a class="text-white" href="">Home</a></p>
+                <p class="m-0"><a class="text-white" href="index.html">Home</a></p>
                 <i class="fa fa-circle px-3"></i>
-                <p class="m-0">Blog</p>
+                <p class="m-0">Blog Grid</p>
+            </div>
+        </div>
+    </div>    
+    <!-- Header End -->
+
+    <!-- Blog Section Start -->
+    <div class="container blog-section">
+        <div class="row">
+       <!-- Blog Grid Start -->
+<div class="col-lg-8">
+    <div class="row">
+        <!-- Blog Post 1 -->
+        <div class="col-md-12 mb-4">
+            <div class="blog-card">
+                <div class="blog-image">
+                    <img src="img/blog1.jpeg" alt="Indian Spices Export Guide">
+                    <div class="blog-date">
+                        <h4>15</h4>
+                        <small>Mar</small>
+                    </div>
+                </div>
+                <div class="blog-content">
+                    <div class="blog-meta">
+                        <div class="blog-author">
+                            <i class="fas fa-user"></i>
+                            <span>Export Manager</span>
+                        </div>
+                        <div class="blog-category">
+                            <i class="fas fa-tag"></i>
+                            <span>Spices Export</span>
+                        </div>
+                    </div>
+                    <h3 class="blog-title">Complete Guide to Indian Spices Export</h3>
+                    <p class="blog-excerpt">Discover the premium quality spices from India and learn about our export process, quality control, and international standards compliance. This comprehensive guide covers everything from sourcing to shipping.</p>
+                    <a href="javascript:void(0)" class="read-more toggle-content" data-target="blog1">
+                        Read More <i class="fa fa-angle-right ml-2"></i>
+                    </a>
+                    
+                    <!-- Extended Content -->
+                    <div class="blog-extended-content" id="blog1">
+                        <div class="extended-content-inner">
+                            <h4>Understanding Indian Spices Export Process</h4>
+                            <p>India is the world's largest producer, consumer, and exporter of spices. Our export process ensures that every batch of spices meets international quality standards while maintaining their authentic flavor and aroma.</p>
+                            
+                            <h5>Key Steps in Our Export Process:</h5>
+                            <ul>
+                                <li><strong>Sourcing:</strong> Direct procurement from trusted farmers across different regions of India</li>
+                                <li><strong>Quality Testing:</strong> Rigorous laboratory testing for purity, moisture content, and contaminants</li>
+                                <li><strong>Processing:</strong> Modern cleaning, grading, and packaging facilities</li>
+                                <li><strong>Documentation:</strong> Complete export documentation and certification</li>
+                                <li><strong>Shipping:</strong> Efficient logistics and timely delivery</li>
+                            </ul>
+                            
+                            <h5>Popular Spices We Export:</h5>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <ul>
+                                        <li>Turmeric (Haldi)</li>
+                                        <li>Red Chili Powder</li>
+                                        <li>Coriander Seeds</li>
+                                        <li>Cumin Seeds (Jeera)</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <ul>
+                                        <li>Black Pepper</li>
+                                        <li>Cardamom</li>
+                                        <li>Cloves</li>
+                                        <li>Fenugreek</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <div class="mt-4">
+                                <a href="contact.html" class="btn btn-primary">
+                                    <i class="fas fa-file-invoice-dollar mr-2"></i>Request Export Quote
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Blog Post 2 -->
+        <div class="col-md-12 mb-4">
+            <div class="blog-card">
+                <div class="blog-image">
+                    <img src="img/blog2.avif" alt="Basmati Rice Quality">
+                    <div class="blog-date">
+                        <h4>22</h4>
+                        <small>Mar</small>
+                    </div>
+                </div>
+                <div class="blog-content">
+                    <div class="blog-meta">
+                        <div class="blog-author">
+                            <i class="fas fa-user"></i>
+                            <span>Quality Head</span>
+                        </div>
+                        <div class="blog-category">
+                            <i class="fas fa-tag"></i>
+                            <span>Rice Quality</span>
+                        </div>
+                    </div>
+                    <h3 class="blog-title">Understanding Premium Basmati Rice Quality</h3>
+                    <p class="blog-excerpt">Learn how we maintain the highest quality standards for our Basmati rice exports and what makes Indian Basmati unique in global markets. Discover the aging process and quality parameters.</p>
+                    <a href="javascript:void(0)" class="read-more toggle-content" data-target="blog2">
+                        Read More <i class="fa fa-angle-right ml-2"></i>
+                    </a>
+                    
+                    <!-- Extended Content -->
+                    <div class="blog-extended-content" id="blog2">
+                        <div class="extended-content-inner">
+                            <h4>The Art of Premium Basmati Rice</h4>
+                            <p>Basmati rice from India is renowned worldwide for its distinctive aroma, long grains, and delicate flavor. Our premium Basmati undergoes a meticulous process to ensure it meets the highest international standards.</p>
+                            
+                            <h5>Quality Parameters We Maintain:</h5>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="quality-parameter">
+                                        <h6>Grain Length</h6>
+                                        <p>Minimum 8.3mm grain length with slender appearance</p>
+                                    </div>
+                                    <div class="quality-parameter">
+                                        <h6>Aroma</h6>
+                                        <p>Natural fragrance characteristic of traditional Basmati</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="quality-parameter">
+                                        <h6>Moisture Content</h6>
+                                        <p>Maximum 14% moisture for optimal shelf life</p>
+                                    </div>
+                                    <div class="quality-parameter">
+                                        <h6>Broken Grains</h6>
+                                        <p>Less than 2% broken grains in premium quality</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <h5>Aging Process:</h5>
+                            <p>Our Basmati rice is carefully aged for 1-2 years to enhance its natural fragrance and ensure non-sticky, separate grains when cooked. This traditional aging process is what sets authentic Basmati apart.</p>
+                            
+                            <div class="alert alert-info mt-4">
+                                <i class="fas fa-info-circle mr-2"></i>
+                                <strong>Did You Know?</strong> Authentic Basmati rice grains elongate to almost twice their original length when cooked.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Blog Post 3 -->
+        <div class="col-md-12 mb-4">
+            <div class="blog-card">
+                <div class="blog-image">
+                    <img src="img/blog3.jpg" alt="Export Process">
+                    <div class="blog-date">
+                        <h4>05</h4>
+                        <small>Apr</small>
+                    </div>
+                </div>
+                <div class="blog-content">
+                    <div class="blog-meta">
+                        <div class="blog-author">
+                            <i class="fas fa-user"></i>
+                            <span>Logistics Head</span>
+                        </div>
+                        <div class="blog-category">
+                            <i class="fas fa-tag"></i>
+                            <span>Export Process</span>
+                        </div>
+                    </div>
+                    <h3 class="blog-title">Streamlined Export Process for Agri Products</h3>
+                    <p class="blog-excerpt">Our comprehensive guide to the export process from sourcing to delivery, ensuring timely and efficient global shipments. Learn about documentation, logistics, and compliance requirements.</p>
+                    <a href="javascript:void(0)" class="read-more toggle-content" data-target="blog3">
+                        Read More <i class="fa fa-angle-right ml-2"></i>
+                    </a>
+                    
+                    <!-- Extended Content -->
+                    <div class="blog-extended-content" id="blog3">
+                        <div class="extended-content-inner">
+                            <h4>Efficient Export Workflow</h4>
+                            <p>Our export process is designed to ensure seamless international trade while maintaining the highest quality standards and compliance with global regulations.</p>
+                            
+                            <h5>Step-by-Step Export Process:</h5>
+                            <div class="process-steps">
+                                <div class="process-step">
+                                    <div class="step-number">1</div>
+                                    <div class="step-content">
+                                        <h6>Order Processing</h6>
+                                        <p>Order confirmation and purchase agreement</p>
+                                    </div>
+                                </div>
+                                <div class="process-step">
+                                    <div class="step-number">2</div>
+                                    <div class="step-content">
+                                        <h6>Quality Inspection</h6>
+                                        <p>Comprehensive quality checks and certification</p>
+                                    </div>
+                                </div>
+                                <div class="process-step">
+                                    <div class="step-number">3</div>
+                                    <div class="step-content">
+                                        <h6>Packaging & Labeling</h6>
+                                        <p>Customized packaging as per destination requirements</p>
+                                    </div>
+                                </div>
+                                <div class="process-step">
+                                    <div class="step-number">4</div>
+                                    <div class="step-content">
+                                        <h6>Documentation</h6>
+                                        <p>Complete export documentation and certificates</p>
+                                    </div>
+                                </div>
+                                <div class="process-step">
+                                    <div class="step-number">5</div>
+                                    <div class="step-content">
+                                        <h6>Shipping & Logistics</h6>
+                                        <p>Efficient transportation and tracking</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <h5>Key Documents Required:</h5>
+                            <ul>
+                                <li>Commercial Invoice</li>
+                                <li>Packing List</li>
+                                <li>Certificate of Origin</li>
+                                <li>Phytosanitary Certificate</li>
+                                <li>Bill of Lading/Airway Bill</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Blog Post 4 -->
+        <div class="col-md-12 mb-4">
+            <div class="blog-card">
+                <div class="blog-image">
+                    <img src="img/blog-5.jpg" alt="Farmer Relationships">
+                    <div class="blog-date">
+                        <h4>12</h4>
+                        <small>Apr</small>
+                    </div>
+                </div>
+                <div class="blog-content">
+                    <div class="blog-meta">
+                        <div class="blog-author">
+                            <i class="fas fa-user"></i>
+                            <span>Sourcing Head</span>
+                        </div>
+                        <div class="blog-category">
+                            <i class="fas fa-tag"></i>
+                            <span>Farmer Network</span>
+                        </div>
+                    </div>
+                    <h3 class="blog-title">Building Sustainable Farmer Relationships</h3>
+                    <p class="blog-excerpt">How we maintain direct relationships with farmers across India to ensure quality sourcing and sustainable agricultural practices. Discover our community engagement initiatives.</p>
+                    <a href="javascript:void(0)" class="read-more toggle-content" data-target="blog4">
+                        Read More <i class="fa fa-angle-right ml-2"></i>
+                    </a>
+                    
+                    <!-- Extended Content -->
+                    <div class="blog-extended-content" id="blog4">
+                        <div class="extended-content-inner">
+                            <h4>Our Commitment to Farmers</h4>
+                            <p>We believe that strong farmer relationships are the foundation of quality agricultural exports. Our direct engagement with farming communities ensures traceability and sustainable practices.</p>
+                            
+                            <h5>Our Farmer Engagement Model:</h5>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="engagement-point">
+                                        <i class="fas fa-handshake text-primary"></i>
+                                        <h6>Direct Procurement</h6>
+                                        <p>Eliminating middlemen for better farmer prices</p>
+                                    </div>
+                                    <div class="engagement-point">
+                                        <i class="fas fa-graduation-cap text-primary"></i>
+                                        <h6>Training Programs</h6>
+                                        <p>Regular workshops on modern farming techniques</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="engagement-point">
+                                        <i class="fas fa-seedling text-primary"></i>
+                                        <h6>Quality Inputs</h6>
+                                        <p>Providing quality seeds and organic fertilizers</p>
+                                    </div>
+                                    <div class="engagement-point">
+                                        <i class="fas fa-tractor text-primary"></i>
+                                        <h6>Technical Support</h6>
+                                        <p>On-ground agricultural experts for guidance</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <h5>Benefits to Farming Communities:</h5>
+                            <ul>
+                                <li>Fair and transparent pricing</li>
+                                <li>Timely payments and financial stability</li>
+                                <li>Access to international market insights</li>
+                                <li>Sustainable farming practices training</li>
+                                <li>Community development initiatives</li>
+                            </ul>
+                            
+                            <div class="success-story mt-4">
+                                <h5>Success Story: Turmeric Farmers in Maharashtra</h5>
+                                <p>Our partnership with turmeric farmers in Sangli district has helped increase their yields by 35% while maintaining organic farming practices. Farmers now receive 25% higher prices through direct procurement.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Blog Post 5 -->
+        <div class="col-md-12 mb-4">
+            <div class="blog-card">
+                <div class="blog-image">
+                    <img src="img/blog-4.jpg" alt="Global Markets">
+                    <div class="blog-date">
+                        <h4>18</h4>
+                        <small>Apr</small>
+                    </div>
+                </div>
+                <div class="blog-content">
+                    <div class="blog-meta">
+                        <div class="blog-author">
+                            <i class="fas fa-user"></i>
+                            <span>Business Head</span>
+                        </div>
+                        <div class="blog-category">
+                            <i class="fas fa-tag"></i>
+                            <span>Global Markets</span>
+                        </div>
+                    </div>
+                    <h3 class="blog-title">Expanding to African & European Markets</h3>
+                    <p class="blog-excerpt">Our journey and strategies in tapping into African, Asian, Gulf, and European markets with Indian agricultural products. Learn about market trends and export opportunities.</p>
+                    <a href="javascript:void(0)" class="read-more toggle-content" data-target="blog5">
+                        Read More <i class="fa fa-angle-right ml-2"></i>
+                    </a>
+                    
+                    <!-- Extended Content -->
+                    <div class="blog-extended-content" id="blog5">
+                        <div class="extended-content-inner">
+                            <h4>Global Market Expansion Strategy</h4>
+                            <p>Our strategic approach to entering and growing in international markets has enabled us to establish a strong presence across multiple continents while adapting to local preferences and regulations.</p>
+                            
+                            <h5>Key Markets & Products:</h5>
+                            <div class="market-table">
+                                <div class="market-row">
+                                    <div class="market-region">African Markets</div>
+                                    <div class="market-products">Spices, Rice, Pulses</div>
+                                    <div class="market-growth">+25% YOY</div>
+                                </div>
+                                <div class="market-row">
+                                    <div class="market-region">European Union</div>
+                                    <div class="market-products">Organic Spices, Basmati Rice</div>
+                                    <div class="market-growth">+18% YOY</div>
+                                </div>
+                                <div class="market-row">
+                                    <div class="market-region">Middle East</div>
+                                    <div class="market-products">Rice, Pulses, Spices</div>
+                                    <div class="market-growth">+22% YOY</div>
+                                </div>
+                                <div class="market-row">
+                                    <div class="market-region">Southeast Asia</div>
+                                    <div class="market-products">Spices, Specialty Rice</div>
+                                    <div class="market-growth">+15% YOY</div>
+                                </div>
+                            </div>
+                            
+                            <h5>Market Entry Strategies:</h5>
+                            <ul>
+                                <li><strong>Market Research:</strong> Comprehensive analysis of local preferences and competition</li>
+                                <li><strong>Regulatory Compliance:</strong> Understanding and adhering to import regulations</li>
+                                <li><strong>Distribution Partnerships:</strong> Collaborating with local distributors</li>
+                                <li><strong>Customized Packaging:</strong> Adapting to local market requirements</li>
+                                <li><strong>Quality Certification:</strong> Obtaining necessary international certifications</li>
+                            </ul>
+                            
+                            <div class="alert alert-success mt-4">
+                                <i class="fas fa-chart-line mr-2"></i>
+                                <strong>Growth Opportunity:</strong> The European organic food market is growing at 12% annually, creating significant opportunities for Indian organic agricultural exports.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Blog Post 6 -->
+        <div class="col-md-12 mb-4">
+            <div class="blog-card">
+                <div class="blog-image">
+                    <img src="img/Advancedquality.jpg" alt="Quality Control">
+                    <div class="blog-date">
+                        <h4>25</h4>
+                        <small>Apr</small>
+                    </div>
+                </div>
+                <div class="blog-content">
+                    <div class="blog-meta">
+                        <div class="blog-author">
+                            <i class="fas fa-user"></i>
+                            <span>Quality Head</span>
+                        </div>
+                        <div class="blog-category">
+                            <i class="fas fa-tag"></i>
+                            <span>Quality Assurance</span>
+                        </div>
+                    </div>
+                    <h3 class="blog-title">Advanced Quality Control in Agricultural Exports</h3>
+                    <p class="blog-excerpt">Explore our state-of-the-art quality control processes that ensure every shipment meets international standards. Learn about testing methods and certification requirements.</p>
+                    <a href="javascript:void(0)" class="read-more toggle-content" data-target="blog6">
+                        Read More <i class="fa fa-angle-right ml-2"></i>
+                    </a>
+                    
+                    <!-- Extended Content -->
+                    <div class="blog-extended-content" id="blog6">
+                        <div class="extended-content-inner">
+                            <h4>Comprehensive Quality Assurance System</h4>
+                            <p>Our multi-layered quality control system ensures that every agricultural product meets the highest international standards before reaching global markets.</p>
+                            
+                            <h5>Quality Control Stages:</h5>
+                            <div class="qc-stages">
+                                <div class="qc-stage">
+                                    <h6>Stage 1: Raw Material Inspection</h6>
+                                    <p>Visual inspection and initial quality assessment at sourcing points</p>
+                                </div>
+                                <div class="qc-stage">
+                                    <h6>Stage 2: Laboratory Testing</h6>
+                                    <p>Advanced laboratory analysis for purity, moisture, and contaminants</p>
+                                </div>
+                                <div class="qc-stage">
+                                    <h6>Stage 3: Processing Quality Check</h6>
+                                    <p>Quality monitoring during cleaning, grading, and processing</p>
+                                </div>
+                                <div class="qc-stage">
+                                    <h6>Stage 4: Pre-shipment Inspection</h6>
+                                    <p>Final quality verification before packaging and shipping</p>
+                                </div>
+                            </div>
+                            
+                            <h5>Testing Parameters & Standards:</h5>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <ul>
+                                        <li>Moisture Content Analysis</li>
+                                        <li>Foreign Matter Detection</li>
+                                        <li>Purity & Adulteration Tests</li>
+                                        <li>Microbiological Testing</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <ul>
+                                        <li>Pesticide Residue Analysis</li>
+                                        <li>Aflatoxin & Mycotoxin Testing</li>
+                                        <li>Heavy Metal Detection</li>
+                                        <li>Nutritional Composition</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <h5>International Certifications:</h5>
+                            <div class="certifications">
+                                <span class="certification-badge">ISO 22000</span>
+                                <span class="certification-badge">HACCP</span>
+                                <span class="certification-badge">FDA Approved</span>
+                                <span class="certification-badge">EU Organic</span>
+                                <span class="certification-badge">FSSAI</span>
+                            </div>
+                            
+                            <div class="quality-metrics mt-4">
+                                <h5>Our Quality Metrics (2024):</h5>
+                                <div class="row text-center">
+                                    <div class="col-4">
+                                        <div class="metric-value">99.7%</div>
+                                        <div class="metric-label">Quality Compliance</div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="metric-value">0.2%</div>
+                                        <div class="metric-label">Rejection Rate</div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="metric-value">100%</div>
+                                        <div class="metric-label">Customer Satisfaction</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-    <!-- Header End -->
 
+    <!-- Pagination -->
+    <!-- <div class="row">
+        <div class="col-12">
+            <nav aria-label="Page navigation">
+                <ul class="pagination justify-content-center">
+                    <li class="page-item disabled">
+                        <a class="page-link" href="#" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                        </a>
+                    </li>
+                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div> -->
+</div>
+<!-- Blog Grid End -->
 
-    <!-- Blog Start -->
-    <div class="container py-5">
-        <div class="row">
-            <!-- Blog Grid Start -->
-            <div class="col-lg-8">
-                <div class="row">
-                    <div class="col-md-12 mb-3">
-                        <div class="position-relative">
-                            <img class="img-fluid w-100" src="img/blog-1.jpg" alt="">
-                            <div class="position-absolute bg-primary d-flex flex-column align-items-center justify-content-center rounded-circle"
-                                style="width: 60px; height: 60px; bottom: -30px; right: 30px;">
-                                <h4 class="font-weight-bold mb-n1">01</h4>
-                                <small class="text-white text-uppercase">Jan</small>
-                            </div>
-                        </div>
-                        <div class="bg-secondary mb-3" style="padding: 30px;">
-                            <div class="d-flex mb-3">
-                                <div class="d-flex align-items-center">
-                                    <img class="rounded-circle" style="width: 40px; height: 40px;" src="img/user.jpg" alt="">
-                                    <a class="text-muted ml-2" href="">John Doe</a>
-                                </div>
-                                <div class="d-flex align-items-center ml-4">
-                                    <i class="far fa-bookmark text-primary"></i>
-                                    <a class="text-muted ml-2" href="">Web Design</a>
-                                </div>
-                            </div>
-                            <h4 class="font-weight-bold mb-3">Kasd tempor diam sea justo dolor</h4>
-                            <p>Dolor sea ipsum ipsum et. Erat duo lorem magna vero dolor dolores. Rebum eirmod no dolor diam dolor amet ipsum. Lorem lorem sea sed diam est lorem magna</p>
-                            <a class="border-bottom border-primary text-uppercase text-decoration-none" href="">Read More <i class="fa fa-angle-right"></i></a>
-                        </div>
-                    </div>
-                    <div class="col-md-12 mb-3">
-                        <div class="position-relative">
-                            <img class="img-fluid w-100" src="img/blog-2.jpg" alt="">
-                            <div class="position-absolute bg-primary d-flex flex-column align-items-center justify-content-center rounded-circle"
-                                style="width: 60px; height: 60px; bottom: -30px; right: 30px;">
-                                <h4 class="font-weight-bold mb-n1">01</h4>
-                                <small class="text-white text-uppercase">Jan</small>
-                            </div>
-                        </div>
-                        <div class="bg-secondary mb-3" style="padding: 30px;">
-                            <div class="d-flex mb-3">
-                                <div class="d-flex align-items-center">
-                                    <img class="rounded-circle" style="width: 40px; height: 40px;" src="img/user.jpg" alt="">
-                                    <a class="text-muted ml-2" href="">John Doe</a>
-                                </div>
-                                <div class="d-flex align-items-center ml-4">
-                                    <i class="far fa-bookmark text-primary"></i>
-                                    <a class="text-muted ml-2" href="">Web Design</a>
-                                </div>
-                            </div>
-                            <h4 class="font-weight-bold mb-3">Kasd tempor diam sea justo dolor</h4>
-                            <p>Dolor sea ipsum ipsum et. Erat duo lorem magna vero dolor dolores. Rebum eirmod no dolor diam dolor amet ipsum. Lorem lorem sea sed diam est lorem magna</p>
-                            <a class="border-bottom border-primary text-uppercase text-decoration-none" href="">Read More <i class="fa fa-angle-right"></i></a>
-                        </div>
-                    </div>
-                    <div class="col-md-12 mb-3">
-                        <div class="position-relative">
-                            <img class="img-fluid w-100" src="img/blog-1.jpg" alt="">
-                            <div class="position-absolute bg-primary d-flex flex-column align-items-center justify-content-center rounded-circle"
-                                style="width: 60px; height: 60px; bottom: -30px; right: 30px;">
-                                <h4 class="font-weight-bold mb-n1">01</h4>
-                                <small class="text-white text-uppercase">Jan</small>
-                            </div>
-                        </div>
-                        <div class="bg-secondary mb-3" style="padding: 30px;">
-                            <div class="d-flex mb-3">
-                                <div class="d-flex align-items-center">
-                                    <img class="rounded-circle" style="width: 40px; height: 40px;" src="img/user.jpg" alt="">
-                                    <a class="text-muted ml-2" href="">John Doe</a>
-                                </div>
-                                <div class="d-flex align-items-center ml-4">
-                                    <i class="far fa-bookmark text-primary"></i>
-                                    <a class="text-muted ml-2" href="">Web Design</a>
-                                </div>
-                            </div>
-                            <h4 class="font-weight-bold mb-3">Kasd tempor diam sea justo dolor</h4>
-                            <p>Dolor sea ipsum ipsum et. Erat duo lorem magna vero dolor dolores. Rebum eirmod no dolor diam dolor amet ipsum. Lorem lorem sea sed diam est lorem magna</p>
-                            <a class="border-bottom border-primary text-uppercase text-decoration-none" href="">Read More <i class="fa fa-angle-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-12">
-                        <nav aria-label="Page navigation">
-                          <ul class="pagination pagination-lg justify-content-center mb-0">
-                            <li class="page-item disabled">
-                              <a class="page-link" href="#" aria-label="Previous">
-                                <span aria-hidden="true">&laquo;</span>
-                                <span class="sr-only">Previous</span>
-                              </a>
-                            </li>
-                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                            <li class="page-item"><a class="page-link" href="#">2</a></li>
-                            <li class="page-item"><a class="page-link" href="#">3</a></li>
-                            <li class="page-item">
-                              <a class="page-link" href="#" aria-label="Next">
-                                <span aria-hidden="true">&raquo;</span>
-                                <span class="sr-only">Next</span>
-                              </a>
-                            </li>
-                          </ul>
-                        </nav>
-                    </div>
-                </div>
-            </div>
-            <!-- Blog Grid End -->
+<style>
+/* Extended Content Styles */
+.blog-extended-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+    background: #f8f9fa;
+    margin-top: 1rem;
+    border-radius: 8px;
+}
+
+.blog-extended-content.active {
+    max-height: 2000px;
+}
+
+.extended-content-inner {
+    padding: 2rem;
+}
+
+.blog-card.active .read-more::after {
+    content: " Read Less";
+}
+
+.blog-card.active .read-more i {
+    transform: rotate(180deg);
+}
+
+/* Extended Content Elements */
+.quality-parameter {
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background: white;
+    border-radius: 8px;
+    border-left: 4px solid #ff9d00;
+}
+
+.process-steps {
+    margin: 2rem 0;
+}
+
+.process-step {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background: white;
+    border-radius: 8px;
+    border: 1px solid #e9ecef;
+}
+
+.step-number {
+    background: #ff9d00;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    margin-right: 1rem;
+    flex-shrink: 0;
+}
+
+.engagement-point {
+    text-align: center;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    background: white;
+    border-radius: 8px;
+    border: 1px solid #e9ecef;
+}
+
+.engagement-point i {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.market-table {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 1.5rem 0;
+}
+
+.market-row {
+    display: flex;
+    padding: 1rem;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.market-row:last-child {
+    border-bottom: none;
+}
+
+.market-region {
+    flex: 2;
+    font-weight: 600;
+}
+
+.market-products {
+    flex: 3;
+    color: #6c757d;
+}
+
+.market-growth {
+    flex: 1;
+    text-align: right;
+    color: #28a745;
+    font-weight: 600;
+}
+
+.qc-stages {
+    margin: 1.5rem 0;
+}
+
+.qc-stage {
+    background: white;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    border-left: 4px solid #ff9d00;
+}
+
+.certifications {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 1rem 0;
+}
+
+.certification-badge {
+    background: #ff9d00;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.quality-metrics {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.metric-value {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ff9d00;
+}
+
+.metric-label {
+    color: #6c757d;
+    font-size: 0.9rem;
+}
+
+.success-story {
+    background: #e7f3ff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 4px solid #007bff;
+}
+
+/* Mobile Responsive */
+@media (max-width: 767.98px) {
+    .extended-content-inner {
+        padding: 1.5rem;
+    }
+    
+    .process-step {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .step-number {
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+    
+    .market-row {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .market-region,
+    .market-products,
+    .market-growth {
+        flex: none;
+        margin-bottom: 0.5rem;
+    }
+    
+    .engagement-point {
+        padding: 1rem;
+    }
+    
+    .certifications {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .extended-content-inner {
+        padding: 1rem;
+    }
+    
+    .quality-metrics .row .col-4 {
+        margin-bottom: 1rem;
+    }
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const readMoreButtons = document.querySelectorAll('.toggle-content');
+    let currentlyActive = null;
+    
+    readMoreButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const targetId = this.getAttribute('data-target');
+            const targetContent = document.getElementById(targetId);
+            const blogCard = this.closest('.blog-card');
+            
+            // Close currently active content if different from clicked one
+            if (currentlyActive && currentlyActive !== targetContent) {
+                currentlyActive.classList.remove('active');
+                currentlyActive.closest('.blog-card').classList.remove('active');
+            }
+            
+            // Toggle current content
+            if (targetContent.classList.contains('active')) {
+                targetContent.classList.remove('active');
+                blogCard.classList.remove('active');
+                currentlyActive = null;
+            } else {
+                targetContent.classList.add('active');
+                blogCard.classList.add('active');
+                currentlyActive = targetContent;
+                
+                // Scroll to the expanded content for better UX
+                targetContent.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'center'
+                });
+            }
+        });
+    });
+});
+</script>
 
             <!-- Sidebar Start -->
             <div class="col-lg-4 mt-5 mt-lg-0">
-                <!-- Search Form Start -->
-                <div class="mb-5">
-                    <div class="bg-secondary" style="padding: 30px;">
-                        <div class="input-group">
-                            <input type="text" class="form-control border-0 p-4" placeholder="Keyword">
-                            <div class="input-group-append">
-                                <span class="input-group-text bg-primary border-primary text-white"><i
-                                        class="fa fa-search"></i></span>
-                            </div>
+                <!-- Search Form -->
+                <!-- <div class="sidebar-widget">
+                    <h4 class="widget-title">Search Blog</h4>
+                    <div class="search-form">
+                        <input type="text" class="form-control" placeholder="Search articles...">
+                        <button type="submit"><i class="fa fa-search"></i></button>
+                    </div>
+                </div> -->
+
+                <!-- Categories -->
+                <div class="sidebar-widget">
+                    <h4 class="widget-title">Categories</h4>
+                    <ul class="category-list">
+                        <li class="category-item">
+                            <a href="#" class="category-link">
+                                <i class="fas fa-pepper-hot"></i>
+                                <span>Spices Export</span>
+                            </a>
+                            <span class="category-count">1</span>
+                        </li>
+                        <li class="category-item">
+                            <a href="#" class="category-link">
+                                <i class="fas fa-wheat-alt"></i>
+                                <span>Rice Quality</span>
+                            </a>
+                            <span class="category-count">1</span>
+                        </li>
+                        <li class="category-item">
+                            <a href="#" class="category-link">
+                                <i class="fas fa-seedling"></i>
+                                <span>Pulses Export</span>
+                            </a>
+                            <span class="category-count">1</span>
+                        </li>
+                        <li class="category-item">
+                            <a href="#" class="category-link">
+                                <i class="fas fa-shipping-fast"></i>
+                                <span>Export Process</span>
+                            </a>
+                            <span class="category-count">1</span>
+                        </li>
+                        <li class="category-item">
+                            <a href="#" class="category-link">
+                                <i class="fas fa-globe-asia"></i>
+                                <span>Global Markets</span>
+                            </a>
+                            <span class="category-count">1</span>
+                        </li>
+                        <li class="category-item">
+                            <a href="#" class="category-link">
+                                <i class="fas fa-users"></i>
+                                <span>Farmer Network</span>
+                            </a>
+                            <span class="category-count">1</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Recent Posts -->
+                <div class="sidebar-widget">
+                    <h4 class="widget-title">Recent Posts</h4>
+                    <div class="recent-post">
+                        <img src="img/blog1.jpeg" alt="Spices Export" class="recent-post-img">
+                        <div class="recent-post-content">
+                            <h5 class="recent-post-title">
+                                <a href="blog-indian-spices-export.html">Complete Guide to Indian Spices Export</a>
+                            </h5>
+                            <div class="recent-post-date">March 15, 2024</div>
+                        </div>
+                    </div>
+                    <div class="recent-post">
+                        <img src="img/blog2.avif" alt="Basmati Rice" class="recent-post-img">
+                        <div class="recent-post-content">
+                            <h5 class="recent-post-title">
+                                <a href="blog-basmati-rice-quality.html">Understanding Premium Basmati Rice Quality</a>
+                            </h5>
+                            <div class="recent-post-date">March 22, 2024</div>
+                        </div>
+                    </div>
+                    <div class="recent-post">
+                        <img src="img/blog3.jpg" alt="Export Process" class="recent-post-img">
+                        <div class="recent-post-content">
+                            <h5 class="recent-post-title">
+                                <a href="blog-export-process.html">Streamlined Export Process for Agri Products</a>
+                            </h5>
+                            <div class="recent-post-date">April 5, 2024</div>
+                        </div>
+                    </div>
+                    <div class="recent-post">
+                        <img src="img/blog-5.jpg" alt="Farmer Relationships" class="recent-post-img">
+                        <div class="recent-post-content">
+                            <h5 class="recent-post-title">
+                                <a href="blog-farmer-relationships.html">Building Sustainable Farmer Relationships</a>
+                            </h5>
+                            <div class="recent-post-date">April 12, 2024</div>
                         </div>
                     </div>
                 </div>
-                <!-- Search Form End -->
 
-                <!-- Category Start -->
-                <div class="mb-5">
-                    <h3 class="mb-4">Categories</h3>
-                    <div class="bg-secondary" style="padding: 30px;">
-                        <ul class="list-inline m-0">
-                            <li class="mb-1 py-2 px-3 bg-light d-flex justify-content-between align-items-center">
-                                <a class="text-dark" href="#"><i class="fa fa-angle-right text-primary mr-2"></i>Web Design</a>
-                                <span class="badge badge-secondary badge-pill">150</span>
-                            </li>
-                            <li class="mb-1 py-2 px-3 bg-light d-flex justify-content-between align-items-center">
-                                <a class="text-dark" href="#"><i class="fa fa-angle-right text-primary mr-2"></i>Web Development</a>
-                                <span class="badge badge-secondary badge-pill">131</span>
-                            </li>
-                            <li class="mb-1 py-2 px-3 bg-light d-flex justify-content-between align-items-center">
-                                <a class="text-dark" href="#"><i class="fa fa-angle-right text-primary mr-2"></i>Online Marketing</a>
-                                <span class="badge badge-secondary badge-pill">78</span>
-                            </li>
-                            <li class="mb-1 py-2 px-3 bg-light d-flex justify-content-between align-items-center">
-                                <a class="text-dark" href="#"><i class="fa fa-angle-right text-primary mr-2"></i>Keyword Research</a>
-                                <span class="badge badge-secondary badge-pill">56</span>
-                            </li>
-                            <li class="py-2 px-3 bg-light d-flex justify-content-between align-items-center">
-                                <a class="text-dark" href="#"><i class="fa fa-angle-right text-primary mr-2"></i>Email Marketing</a>
-                                <span class="badge badge-secondary badge-pill">98</span>
-                            </li>
-                        </ul>
+                <!-- Tag Cloud -->
+                <div class="sidebar-widget">
+                    <h4 class="widget-title">Popular Tags</h4>
+                    <div class="tag-cloud">
+                        <a href="#" class="tag">Spices</a>
+                        <a href="#" class="tag">Rice</a>
+                        <a href="#" class="tag">Pulses</a>
+                        <a href="#" class="tag">Export</a>
+                        <a href="#" class="tag">Quality</a>
+                        <a href="#" class="tag">Agriculture</a>
+                        <a href="#" class="tag">Farmers</a>
+                        <a href="#" class="tag">International</a>
+                        <a href="#" class="tag">Shipping</a>
+                        <a href="#" class="tag">Logistics</a>
                     </div>
                 </div>
-                <!-- Category End -->
 
-                <!-- Recent Post Start -->
-                <div class="mb-5">
-                    <h3 class="mb-4">Recent Post</h3>
-                    <div class="d-flex mb-3">
-                        <img class="img-fluid" src="img/blog-1.jpg" style="width: 80px; height: 80px; object-fit: cover;" alt="">
-                        <a href="" class="d-flex align-items-center bg-secondary text-dark text-decoration-none px-3" style="height: 80px;">
-                            Lorem ipsum dolor sit amet consec adipis elit
-                        </a>
+                <!-- Newsletter -->
+                <!-- <div class="sidebar-widget">
+                    <h4 class="widget-title">Newsletter</h4>
+                    <p>Subscribe to our newsletter for the latest updates on agriculture exports and market trends.</p>
+                    <div class="search-form">
+                        <input type="email" class="form-control" placeholder="Your email address">
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
                     </div>
-                    <div class="d-flex mb-3">
-                        <img class="img-fluid" src="img/blog-2.jpg" style="width: 80px; height: 80px; object-fit: cover;" alt="">
-                        <a href="" class="d-flex align-items-center bg-secondary text-dark text-decoration-none px-3" style="height: 80px;">
-                            Lorem ipsum dolor sit amet consec adipis elit
-                        </a>
-                    </div>
-                    <div class="d-flex mb-3">
-                        <img class="img-fluid" src="img/blog-1.jpg" style="width: 80px; height: 80px; object-fit: cover;" alt="">
-                        <a href="" class="d-flex align-items-center bg-secondary text-dark text-decoration-none px-3" style="height: 80px;">
-                            Lorem ipsum dolor sit amet consec adipis elit
-                        </a>
-                    </div>
-                    <div class="d-flex mb-3">
-                        <img class="img-fluid" src="img/blog-2.jpg" style="width: 80px; height: 80px; object-fit: cover;" alt="">
-                        <a href="" class="d-flex align-items-center bg-secondary text-dark text-decoration-none px-3" style="height: 80px;">
-                            Lorem ipsum dolor sit amet consec adipis elit
-                        </a>
-                    </div>
-                    <div class="d-flex mb-3">
-                        <img class="img-fluid" src="img/blog-1.jpg" style="width: 80px; height: 80px; object-fit: cover;" alt="">
-                        <a href="" class="d-flex align-items-center bg-secondary text-dark text-decoration-none px-3" style="height: 80px;">
-                            Lorem ipsum dolor sit amet consec adipis elit
-                        </a>
-                    </div>
-                </div>
-                <!-- Recent Post End -->
-
-                <!-- Image Start -->
-                <div class="mb-5">
-                    <img src="img/blog-1.jpg" alt="" class="img-fluid">
-                </div>
-                <!-- Image End -->
-
-                <!-- Tags Start -->
-                <div class="mb-5">
-                    <h3 class="mb-4">Tag Cloud</h3>
-                    <div class="d-flex flex-wrap m-n1">
-                        <a href="" class="btn btn-secondary m-1">Design</a>
-                        <a href="" class="btn btn-secondary m-1">Development</a>
-                        <a href="" class="btn btn-secondary m-1">Marketing</a>
-                        <a href="" class="btn btn-secondary m-1">SEO</a>
-                        <a href="" class="btn btn-secondary m-1">Writing</a>
-                        <a href="" class="btn btn-secondary m-1">Consulting</a>
-                    </div>
-                </div>
-                <!-- Tags End -->
-
-                <!-- Image Start -->
-                <div class="mb-5">
-                    <img src="img/blog-2.jpg" alt="" class="img-fluid">
-                </div>
-                <!-- Image End -->
-
-                <!-- Plain Text Start -->
-                <div>
-                    <h3 class="mb-4">Plain Text</h3>
-                    <div class="bg-secondary text-center" style="padding: 30px;">
-                        <p>Vero sea et accusam justo dolor accusam lorem consetetur, dolores sit amet sit dolor clita kasd justo, diam accusam no sea ut tempor magna takimata, amet sit et diam dolor ipsum amet diam</p>
-                        <a href="" class="btn btn-primary py-2 px-4">Read More</a>
-                    </div>
-                </div>
-                <!-- Plain Text End -->
+                </div> -->
             </div>
             <!-- Sidebar End -->
         </div>
     </div>
-    <!-- Blog End -->
-
+    <!-- Blog Section End -->
 
     <!-- Footer Start -->
     <div class="container-fluid bg-dark text-white mt-5 py-5 px-sm-3 px-md-5">
@@ -344,9 +1536,11 @@
                 <div class="row">
                     <div class="col-md-6 mb-5">
                         <h3 class="text-primary mb-4">Get In Touch</h3>
-                        <p><i class="fa fa-map-marker-alt mr-2"></i>123 Street, New York, USA</p>
-                        <p><i class="fa fa-phone-alt mr-2"></i>+012 345 67890</p>
-                        <p><i class="fa fa-envelope mr-2"></i>info@example.com</p>
+                        <p><i class="fa fa-map-marker-alt mr-2"></i>Iqra Compound Adhartala, Jabalpur, India</p>
+                        <p><i class="fa fa-phone-alt mr-2"></i>+91 79993 19196</p>
+                        <p><i class="fa fa-phone-alt mr-2"></i>+91 72183 37339</p>
+                        <p><i class="fa fa-envelope mr-2"></i>sales@qmmerchant.com</p>
+                        <p><i class="fa fa-envelope mr-2"></i>exports@qmmerchant.com</p>
                         <div class="d-flex justify-content-start mt-4">
                             <a class="btn btn-outline-light btn-social mr-2" href="#"><i class="fab fa-twitter"></i></a>
                             <a class="btn btn-outline-light btn-social mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
@@ -357,62 +1551,54 @@
                     <div class="col-md-6 mb-5">
                         <h3 class="text-primary mb-4">Quick Links</h3>
                         <div class="d-flex flex-column justify-content-start">
-                            <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Home</a>
-                            <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>About Us</a>
-                            <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Our Services</a>
-                            <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Pricing Plan</a>
-                            <a class="text-white" href="#"><i class="fa fa-angle-right mr-2"></i>Contact Us</a>
+                            <a class="text-white mb-2" href="index.html"><i class="fa fa-angle-right mr-2"></i>Home</a>
+                            <a class="text-white mb-2" href="about.html"><i class="fa fa-angle-right mr-2"></i>About Us</a>
+                            <a class="text-white mb-2" href="products.html"><i class="fa fa-angle-right mr-2"></i>Products</a>
+                            <a class="text-white mb-2" href="price.html"><i class="fa fa-angle-right mr-2"></i>Payment Terms</a>
+                            <a class="text-white" href="contact.html"><i class="fa fa-angle-right mr-2"></i>Contact Us</a>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="col-lg-5 col-md-6 mb-5">
-                <h3 class="text-primary mb-4">Newsletter</h3>
-                <p>Rebum labore lorem dolores kasd est, et ipsum amet et at kasd, ipsum sea tempor magna tempor. Accu kasd sed ea duo ipsum. Dolor duo eirmod sea justo no lorem est diam</p>
-                <div class="w-100">
-                    <div class="input-group">
-                        <input type="text" class="form-control border-light" style="padding: 30px;" placeholder="Your Email Address">
-                        <div class="input-group-append">
-                            <button class="btn btn-primary px-4">Sign Up</button>
-                        </div>
+                <h3 class="text-primary mb-4">About QM Merchant International</h3>
+                <p>QM Merchant International Pvt. Ltd. is a leading exporter of premium quality spices, rice, and pulses from India. With years of experience in international trade, we provide valuable insights through our agriculture blog.</p>
+                
+                <div class="d-flex mb-3">
+                    <div class="mr-3">
+                        <i class="fas fa-pepper-hot text-primary"></i>
+                        <span class="text-white ml-2">Spices</span>
+                    </div>
+                    <div class="mr-3">
+                        <i class="fas fa-wheat-alt text-primary"></i>
+                        <span class="text-white ml-2">Rice</span>
+                    </div>
+                    <div>
+                        <i class="fas fa-seedling text-primary"></i>
+                        <span class="text-white ml-2">Pulses</span>
                     </div>
                 </div>
+                
+                <h5 class="text-primary mb-3">Business Hours</h5>
+                <p class="mb-1">Monday - Friday: 9:00 AM - 6:00 PM</p>
+                <p class="mb-1">Saturday: 9:00 AM - 2:00 PM</p>
+                <p>Sunday: Closed</p>
             </div>
         </div>
     </div>
+
     <div class="container-fluid bg-dark text-white border-top py-4 px-sm-3 px-md-5" style="border-color: #3E3E4E !important;">
         <div class="row">
             <div class="col-lg-6 text-center text-md-left mb-3 mb-md-0">
-                <p class="m-0 text-white">&copy; <a href="#">Your Site Name</a>. All Rights Reserved. 
-				
-				<!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-				Designed by <a href="https://htmlcodex.com">HTML Codex</a>
-                </p>
-            </div>
-            <div class="col-lg-6 text-center text-md-right">
-                <ul class="nav d-inline-flex">
-                    <li class="nav-item">
-                        <a class="nav-link text-white py-0" href="#">Privacy</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white py-0" href="#">Terms</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white py-0" href="#">FAQs</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white py-0" href="#">Help</a>
-                    </li>
-                </ul>
+                <p class="m-0 text-white">&copy; <a href="#" class="text-primary">QM Merchant International Pvt. Ltd.</a>. All Rights Reserved. 
+                Established 2025</p>
             </div>
         </div>
     </div>
     <!-- Footer End -->
 
-
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary back-to-top"><i class="fa fa-angle-double-up"></i></a>
-
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
@@ -422,12 +1608,25 @@
     <script src="lib/counterup/counterup.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
 
-    <!-- Contact Javascript File -->
-    <script src="mail/jqBootstrapValidation.min.js"></script>
-    <script src="mail/contact.js"></script>
-
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
-</body>
 
+    <script>
+        // Back to top button functionality
+        $(document).ready(function(){
+            $(window).scroll(function(){
+                if ($(this).scrollTop() > 300) {
+                    $('.back-to-top').fadeIn('slow');
+                } else {
+                    $('.back-to-top').fadeOut('slow');
+                }
+            });
+            
+            $('.back-to-top').click(function(){
+                $('html, body').animate({scrollTop : 0}, 800);
+                return false;
+            });
+        });
+    </script>
+</body>
 </html>
